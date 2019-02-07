@@ -1,0 +1,36 @@
+{
+  "name": "portfolio2019",
+  "private": true,
+  "description": "A performant, minimalist, static portfolio.",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samhh/portfolio2019.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "lint": "eslint ./src/ --ext ts,tsx"
+  },
+  "dependencies": {
+    "date-fns": "^2.0.0-alpha.27",
+    "gatsby": "^2.0.111",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^1.2.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-favicon": "^3.1.5",
+    "gatsby-plugin-typescript": "^2.0.6",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-json": "^2.1.8",
+    "typescript": "^3.3.1"
+  }
+}

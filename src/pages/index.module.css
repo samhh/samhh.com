@@ -1,0 +1,46 @@
+.page {
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.themer {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.name {
+	margin: 0;
+	font-size: 3em;
+	font-weight: normal;
+}
+
+.contact {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1.6rem;
+}
+
+.contact li {
+	display: block;
+	white-space: pre;
+}
+
+@media (min-width: 600px) {
+	.contact li {
+		display: inline-block;
+	}
+
+	.contact li:not(:first-child)::before {
+		content: '| ';
+	}
+
+	.contact li:not(:last-child)::after {
+		content: ' ';
+	}
+}
+
+.intro {
+	margin: 5rem 0;
+}

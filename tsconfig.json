@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"target": "esnext",
+		"strict": true,
+		"lib": ["esnext", "dom"],
+		"jsx": "react",
+		"baseUrl": "./src/",
+		"paths": {
+			"Components/*": [
+				"./components/*"
+			],
+			"Modules/*": [
+				"./modules/*"
+			]
+		}
+	}
+}
