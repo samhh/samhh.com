@@ -27,7 +27,6 @@ export const query = graphql`
 			}
 			work {
 				company
-				titlePrefix
 				website
 				startDate
 				endDate
@@ -71,7 +70,6 @@ interface GetResumeRes {
 			};
 			work: {
 				company: string;
-				titlePrefix: string;
 				website: string;
 				startDate: string;
 				endDate: string;
@@ -131,9 +129,7 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 					<Section title="Jobs" body={() => work.map(job => (
 						<Experience
 							key={job.startDate}
-							title={() => (
-								<>{job.titlePrefix} Software Engineer <small>at</small> <a href={job.website} target="_blank">{job.company}</a></>
-							)}
+							title={() => <a href={job.website} target="_blank">{job.company}</a>}
 							dates={[new Date(job.startDate), job.endDate ? new Date(job.endDate) : undefined]}
 							summary={job.summary}
 							tags={job.highlights}
