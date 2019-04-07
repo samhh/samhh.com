@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import s from './index.module.css';
 import Experience from 'Components/experience/';
 import Footer from 'Components/footer/';
+import Helmet from 'react-helmet';
 import Quote from 'Components/quote/';
 import Section from 'Components/section/';
 
@@ -97,6 +98,10 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 
 	return (
 		<>
+			<Helmet>
+				<title>Sam A. Horvath-Hunt — Software Engineer — Portfolio</title>
+			</Helmet>
+
 			<div className={[s.page, 'u-width-limiter'].join(' ')}>
 				<header>
 					<h1 className={s.name}>

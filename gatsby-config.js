@@ -10,11 +10,8 @@ const tsconfigAliases = Object.entries(tsconfig.compilerOptions.paths).reduce((a
 }, {});
 
 module.exports = {
-	siteMetadata: {
-		name: 'Sam A. Horvath-Hunt — Portfolio',
-		tagline: 'Sam A. Horvath-Hunt\'s portfolio.',
-	},
-  plugins: [
+	plugins: [
+		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-plugin-favicon',
 			options: {
