@@ -41,7 +41,7 @@
       "website": "https://www.oddschecker.com",
       "startDate": "2017-02-28",
       "endDate": "2018-12-10",
-			"summary": "At Oddschecker I pioneered a greenfield B2B project utilising React and D3 on the frontend and Node on the backend, and it's here that I was introduced to static typing and TypeScript, something I now can't see myself ever leaving behind. I was, as ever, perennially focused on code quality and long-term maintainability, and I matured significantly as a developer as it pertains to prioritising business interests without creating insurmountable code debt. I also began to mentor more junior members of the team.",
+			"summary": "At Oddschecker I pioneered a greenfield B2B project utilising React and D3 on the frontend and Node on the backend, and it's here that I was introduced to static typing and TypeScript, something I now can't see myself ever leaving behind. I was, as ever, perennially focused on code quality and long-term maintainability, and I matured significantly as a developer as it pertains to prioritising business interests without sacrificing said code quality. I also began to mentor more junior members of the team.",
 			"highlights": ["TypeScript", "React", "D3", "Node", "MongoDB"]
     },
     {
