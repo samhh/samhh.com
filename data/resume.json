@@ -33,7 +33,7 @@
 			"website": "https://www.adaptavist.com",
 			"startDate": "2018-12-11",
 			"endDate": "",
-			"summary": "I started at Adaptavist in the fall of 2018, and will update this section once more time has passed. :-)",
+			"summary": "I started working remotely at Adaptavist in the fall of 2018, and have spent considerable time refactoring the untyped codebase to strict TypeScript, improving quality and maintainability along the way. I've been a strong voice for best practices both within my team and the wider department.",
 			"highlights": ["TypeScript", "React"]
 		},
     {
