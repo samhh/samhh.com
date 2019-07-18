@@ -4,7 +4,7 @@
 		"label": "Software Engineer",
     "email": "contact@samhh.com",
     "website": "https://samhh.com",
-    "summary": "Hi there! I'm a software engineer in London specialising in TypeScript. I also enjoy dabbling in systems programming with Rust.",
+    "summary": "Hi there! I'm a software engineer in London specialising in TypeScript. I also enjoy dabbling in systems programming with Rust and exploring purely functional programming in Haskell.",
     "location": {
       "city": "London",
       "countryCode": "GB"
