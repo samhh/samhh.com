@@ -4,7 +4,7 @@
 		"label": "Software Engineer",
     "email": "contact@samhh.com",
     "website": "https://samhh.com",
-    "summary": "Hi there! I'm a software engineer in London specialising in TypeScript. I also enjoy dabbling in systems programming with Rust and exploring purely functional programming in Haskell.",
+    "summary": "Hi there! I'm a software engineer in London, currently working remotely, with a growing passion for pure functional programming in the likes of Haskell and PureScript.",
     "location": {
       "city": "London",
       "countryCode": "GB"
@@ -33,15 +33,15 @@
 			"website": "https://www.adaptavist.com",
 			"startDate": "2018-12-11",
 			"endDate": "",
-			"summary": "I started working remotely at Adaptavist in the fall of 2018, and have spent considerable time refactoring the untyped codebase to strict TypeScript, improving quality and maintainability along the way. I've been a strong voice for best practices both within my team and the wider department.",
-			"highlights": ["TypeScript", "React"]
+			"summary": "At Adaptavist I've spent considerable time refactoring the untyped codebase to strict TypeScript, improving quality, safety, and maintainability along the way. I'm a strong voice for best practices within my team, and am a positive proponent of functional programming to the wider department. I've also begun leading the way on testing, introducing property-based testing to our unit tests and integration testing to our React components.",
+			"highlights": ["TypeScript", "React", "Node", "Testing", "Microservices"]
 		},
     {
 			"company": "Oddschecker",
       "website": "https://www.oddschecker.com",
       "startDate": "2017-02-28",
       "endDate": "2018-12-10",
-			"summary": "At Oddschecker I pioneered a greenfield B2B project utilising React and D3 on the frontend and Node on the backend, and it's here that I was introduced to static typing and TypeScript, something I now can't see myself ever leaving behind. I was, as ever, perennially focused on code quality and long-term maintainability, and I matured significantly as a developer as it pertains to prioritising business interests without sacrificing said code quality. I also began to mentor more junior members of the team.",
+			"summary": "At Oddschecker I pioneered a greenfield B2B project utilising React and D3 on the frontend and Node on the backend, and it's here that I was introduced to static typing and TypeScript, something I now can't see myself ever leaving behind. I was, as ever, perennially focused on code quality and long-term maintainability, and I matured significantly as a developer as it pertains to balancing overt business interests against tech debt. I also began to mentor more junior members of the team.",
 			"highlights": ["TypeScript", "React", "D3", "Node", "MongoDB"]
     },
     {
@@ -49,7 +49,7 @@
       "website": "https://weareimpero.com",
       "startDate": "2015-12-07",
       "endDate": "2017-02-25",
-			"summary": "My work at Impero was predominantly frontend-heavy and really challenged me to get to grips with the wonderful disaster that is CSS, as well as more importantly level up my JavaScript ability. I single-handedly rewrote Impero's new website, routinely created new campaign websites for large brands from scratch following designs, and worked alongside other developers to maintain larger websites for our bigger clients, such as Beefeater, Campo Viejo, Jacob's Creek, Pernod Ricard, Lindt, and more. By the end of my time here I was proficient in vanilla JavaScript and beginning to enter the world of functional reactive programming with Vue.",
+			"summary": "My work at Impero was predominantly frontend-heavy and really challenged me to get to grips with the wonderful disaster that is CSS, as well as more importantly level up my JavaScript ability. I single-handedly rewrote Impero's new website, routinely created new campaign websites for large brands from scratch following designs, and worked alongside other developers to maintain larger websites for our bigger clients, such as Beefeater and Lindt. By the end of my time here I was proficient in vanilla JavaScript and beginning to enter the world of functional reactive programming with Vue.",
 			"highlights": ["JavaScript", "Vue", "Node.js", "Stylus", "PostCSS"]
     },
     {
@@ -57,7 +57,7 @@
       "website": "http://www.perspectivepublishing.com",
       "startDate": "2014-03-03",
       "endDate": "2015-12-04",
-			"summary": "After a highly successful apprenticeship I swiftly took over the reigns designing and developing the frontend of the websites at Perspective Publishing. After creating preliminary designs I would code them in their entirety myself, always with an eye to code reuse and modularity. I also began to take on a larger role with regards to the backend whilst rewriting the internal company CMS from scratch; converging a few dozen separate but identical CMSes​ into one unified, more modern experience. In addition I also spearheaded the change from archaic FTP uploads to a version control system.",
+			"summary": "After a highly successful apprenticeship I swiftly took over the reigns designing and developing the frontend of the websites at Perspective Publishing. After creating preliminary designs I would code them in their entirety myself, always with an eye to code reuse and modularity. I also began to take on a larger role with regards to the backend whilst rewriting the internal company CMS from scratch; converging a few dozen separate but identical CMS' into one unified, more modern experience. In addition I also spearheaded the change from archaic FTP uploads to a version control system.",
 			"highlights": ["HTML", "CSS", "Sass", "PHP", "MySQL", "Git"]
     }
   ],
@@ -67,7 +67,7 @@
       "website": "https://github.com/samhh/bukubrow",
       "startDate": "2017-02-21",
 			"endDate": "",
-			"summary": "Bukubrow is a WebExtension for Buku, a command-line bookmark manager. It includes a native binary written in Rust that interfaces with the Buku database.",
+			"summary": "Bukubrow is a WebExtension for Buku, a command-line bookmark manager. It includes a native binary written in Rust that interfaces with the Buku database. The frontend is currently being rewritten in PureScript. As of time of writing, analytics from Firefox and Chrome suggest that this WebExtension is being actively used by several hundred people.",
 			"highlights": ["Rust", "TypeScript", "React", "Regex", "SQLite"]
 		},
 		{
@@ -81,12 +81,16 @@
   ],
   "interests": [
 		{
-			"name": "Computers (Surprise!)",
-			"summary": "I've been tinkering with Linux for what feels like forever and have settled on Arch as my distro of choice, and (n)vim as my preferred modal editor. Naturally, this means I like to do most things on the command-line. I do dip out of there from time to time to play games in VR on the PC I built. Beat Saber is awesome!"
+			"name": "Mathematics",
+			"summary": "Functional programming has reintroduced me to mathematics, the subject I always felt an affinity for. I'm working my way through Khan Academy at the moment."
+		},
+		{
+			"name": "Computers, Linux, & PC Gaming",
+			"summary": "I've been tinkering with Linux for what feels like forever and have settled on Arch as my distro of choice, Sway as my tiling window manager, and (n)vim as my preferred modal editor. Naturally, this means I like to do most things on the command-line. I do dip out of there from time to time to play some games, be that Black Mesa or Beat Saber. I hit Grand Champion in Rocket League a while back and decided that was the right time to take it out of my regular rotation, but feel free to hit me up for a game."
 		},
     {
-			"name": "Football & Staying Fit",
-			"summary": "I enjoy playing football, and I run a few times per week to keep fit; my sweet tooth gives me no choice!"
+			"name": "Running & Self-Improvement",
+			"summary": "I've found that working remotely enables me to run more frequently. I'm still not very fast over long distances, but I'm getting there. Running in tandem with fasting has enabled me to lose nearly 20kg since late 2018. Self-improvement in all aspects of life is very important to me."
 		}
   ]
 }
