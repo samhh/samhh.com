@@ -16,14 +16,14 @@
         "url": "https://github.com/samhh"
       },
       {
+        "network": "DEV",
+        "username": "samhh",
+        "url": "https://dev.to/samhh"
+      },
+      {
         "network": "StackOverflow",
         "username": "samhh",
         "url": "https://stackoverflow.com/users/3369753/samhh"
-      },
-      {
-        "network": "Twitter",
-        "username": "samhh95",
-        "url": "https://twitter.com/samhh95"
       }
     ]
   },
