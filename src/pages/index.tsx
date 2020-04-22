@@ -1,6 +1,11 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
+import * as O from 'fp-ts/lib/Option';
+import { pipe } from 'fp-ts/lib/pipeable';
+import { not } from 'fp-ts/lib/function';
+import { isEmpty } from 'Modules/string';
+import { fromString } from 'Modules/date';
 import Experience from 'Components/experience/';
 import Footer from 'Components/footer/';
 import Helmet from 'react-helmet';
@@ -113,8 +118,8 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 						<li>{basics.location.city}, {basics.location.countryCode}</li>
 						<li><a href={`mailto:${basics.email}`}>Email</a></li>
 
-						{basics.profiles.map(prof => (
-							<li key={prof.network}><a href={prof.url} target="_blank" rel="noopener noreferrer">{prof.network}</a></li>
+						{basics.profiles.map(p => (
+							<li key={p.network}><a href={p.url} target="_blank" rel="noopener noreferrer">{p.network}</a></li>
 						))}
 					</ul>
 				</header>
@@ -131,31 +136,31 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 						author="W. Edwards Deming"
 					/>
 
-					<Section title="Jobs" body={(): ReactNode => work.map(job => (
+					<Section title="Jobs" body={(): ReactNode => work.map(j => (
 						<Experience
-							key={job.startDate}
-							title={(): ReactNode => <a href={job.website} target="_blank" rel="noopener noreferrer">{job.company}</a>}
-							dates={[new Date(job.startDate), job.endDate ? new Date(job.endDate) : undefined]}
-							summary={job.summary}
-							tags={job.highlights}
+							key={j.startDate}
+							title={(): ReactNode => <a href={j.website} target="_blank" rel="noopener noreferrer">{j.company}</a>}
+							dates={[new Date(j.startDate), pipe(O.fromPredicate(not(isEmpty))(j.endDate), O.chain(fromString))]}
+							summary={j.summary}
+							tags={j.highlights}
 						/>
 					))} />
 
-					<Section title="Open Source" body={(): ReactNode => projects.map(project => (
+					<Section title="Open Source" body={(): ReactNode => projects.map(p => (
 						<Experience
-							key={project.name + project.startDate}
-							title={(): ReactNode => <a href={project.website} target="_blank" rel="noopener noreferrer">{project.name}</a>}
-							dates={[new Date(project.startDate), project.endDate ? new Date(project.endDate) : undefined]}
-							summary={project.summary}
-							tags={project.highlights}
+							key={p.name + p.startDate}
+							title={(): ReactNode => <a href={p.website} target="_blank" rel="noopener noreferrer">{p.name}</a>}
+							dates={[new Date(p.startDate), pipe(O.fromPredicate(not(isEmpty))(p.endDate), O.chain(fromString))]}
+							summary={p.summary}
+							tags={p.highlights}
 						/>
 					))} />
 
-					<Section title="Hobbies" body={(): ReactNode => interests.map(hobby => (
+					<Section title="Hobbies" body={(): ReactNode => interests.map(h => (
 						<Experience
-							key={hobby.name}
-							title={hobby.name}
-							summary={hobby.summary}
+							key={h.name}
+							title={h.name}
+							summary={h.summary}
 						/>
 					))} />
 				</main>

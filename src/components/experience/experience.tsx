@@ -1,14 +1,15 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import { format } from 'date-fns';
+import * as O from 'fp-ts/lib/Option';
+import { constant } from 'fp-ts/lib/function';
+import formatDate from 'date-fns/fp/format';
 import s from './experience.module.css';
 
-const formatMaybeDate = (date?: Date): string => date
-	? format(date, 'MMMM yyyy')
-	: 'Present';
+const fmt = formatDate('MMMM yyyy');
+const fmtCurr = O.fold(constant('Present'), fmt);
 
 interface Props {
 	title: string | (() => ReactNode);
-	dates?: [Date, Date?];
+	dates?: [Date, Option<Date>];
 	summary: string;
 	tags?: string[];
 }
@@ -19,7 +20,7 @@ const Experience: FunctionComponent<Props> = (props) => (
 
 		{props.dates && (
 			<h3 className={s.infoSecondary}>
-				{formatMaybeDate(props.dates[0])} - {formatMaybeDate(props.dates[1])}
+				{fmt(props.dates[0])} - {fmtCurr(props.dates[1])}
 			</h3>
 		)}
 
