@@ -114,7 +114,7 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 						<li><a href={`mailto:${basics.email}`}>Email</a></li>
 
 						{basics.profiles.map(prof => (
-							<li key={prof.network}><a href={prof.url} target="_blank">{prof.network}</a></li>
+							<li key={prof.network}><a href={prof.url} target="_blank" rel="noopener noreferrer">{prof.network}</a></li>
 						))}
 					</ul>
 				</header>
@@ -134,7 +134,7 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 					<Section title="Jobs" body={() => work.map(job => (
 						<Experience
 							key={job.startDate}
-							title={() => <a href={job.website} target="_blank">{job.company}</a>}
+							title={() => <a href={job.website} target="_blank" rel="noopener noreferrer">{job.company}</a>}
 							dates={[new Date(job.startDate), job.endDate ? new Date(job.endDate) : undefined]}
 							summary={job.summary}
 							tags={job.highlights}
@@ -144,7 +144,7 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 					<Section title="Open Source" body={() => projects.map(project => (
 						<Experience
 							key={project.name + project.startDate}
-							title={() => <a href={project.website} target="_blank">{project.name}</a>}
+							title={() => <a href={project.website} target="_blank" rel="noopener noreferrer">{project.name}</a>}
 							dates={[new Date(project.startDate), project.endDate ? new Date(project.endDate) : undefined]}
 							summary={project.summary}
 							tags={project.highlights}
@@ -170,3 +170,4 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 };
 
 export default homepage;
+
