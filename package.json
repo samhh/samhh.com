@@ -16,7 +16,7 @@
     "lint": "eslint ./src/ --ext ts,tsx"
   },
   "dependencies": {
-    "date-fns": "^2.0.0-alpha.27",
+    "date-fns": "^2.12.0",
     "gatsby": "^2.0.111",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "react": "^16.7.0",
@@ -25,15 +25,15 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.8",
-    "@typescript-eslint/eslint-plugin": "^1.2.0",
-    "@typescript-eslint/parser": "^1.2.0",
-    "eslint": "^5.13.0",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-typescript": "^2.0.6",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-json": "^2.1.8",
-    "typescript": "^3.3.1"
+    "typescript": "^3.8.3"
   }
 }
