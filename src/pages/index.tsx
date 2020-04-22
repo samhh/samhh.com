@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
 import Experience from 'Components/experience/';
@@ -131,27 +131,27 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 						author="W. Edwards Deming"
 					/>
 
-					<Section title="Jobs" body={() => work.map(job => (
+					<Section title="Jobs" body={(): ReactNode => work.map(job => (
 						<Experience
 							key={job.startDate}
-							title={() => <a href={job.website} target="_blank" rel="noopener noreferrer">{job.company}</a>}
+							title={(): ReactNode => <a href={job.website} target="_blank" rel="noopener noreferrer">{job.company}</a>}
 							dates={[new Date(job.startDate), job.endDate ? new Date(job.endDate) : undefined]}
 							summary={job.summary}
 							tags={job.highlights}
 						/>
 					))} />
 
-					<Section title="Open Source" body={() => projects.map(project => (
+					<Section title="Open Source" body={(): ReactNode => projects.map(project => (
 						<Experience
 							key={project.name + project.startDate}
-							title={() => <a href={project.website} target="_blank" rel="noopener noreferrer">{project.name}</a>}
+							title={(): ReactNode => <a href={project.website} target="_blank" rel="noopener noreferrer">{project.name}</a>}
 							dates={[new Date(project.startDate), project.endDate ? new Date(project.endDate) : undefined]}
 							summary={project.summary}
 							tags={project.highlights}
 						/>
 					))} />
 
-					<Section title="Hobbies" body={() => interests.map(hobby => (
+					<Section title="Hobbies" body={(): ReactNode => interests.map(hobby => (
 						<Experience
 							key={hobby.name}
 							title={hobby.name}

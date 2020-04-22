@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { format } from 'date-fns';
 import s from './experience.module.css';
 
-const formatMaybeDate = (date?: Date) => date
+const formatMaybeDate = (date?: Date): string => date
 	? format(date, 'MMMM yyyy')
 	: 'Present';
 
@@ -36,3 +36,4 @@ const Experience: FunctionComponent<Props> = (props) => (
 );
 
 export default Experience;
+

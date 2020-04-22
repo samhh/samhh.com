@@ -21,7 +21,6 @@ module.exports = {
 	},
 	rules: {
     '@typescript-eslint/indent': 0,
-		'@typescript-eslint/explicit-function-return-type': 0,
 		'react/prop-types': 0,
 		'react/no-unescaped-entities': 0,
 		'react/display-name': 0,
