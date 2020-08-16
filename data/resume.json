@@ -91,6 +91,18 @@
 				}
 			],
 			"highlights": ["Haskell"]
+		},
+		{
+			"name": "fp-ts-contrib",
+			"website": "https://github.com/gcanti/fp-ts-contrib",
+			"summary": "fp-ts-contrib is a community-driven utility package for fp-ts, a library which enables typed functional programming in TypeScript. My contribution added the filterA module, which enables filtering an array with an applicative predicate.",
+			"pullRequests": [
+				{
+					"id": "!56",
+					"url": "https://github.com/gcanti/fp-ts-contrib/pull/56"
+				}
+			],
+			"highlights": ["TypeScript"]
 		}
 	],
   "interests": [
