@@ -47,6 +47,16 @@ export const query = graphql`
 				summary
 				highlights
 			}
+			contrib {
+				name
+				website
+				summary
+				pullRequests {
+					id
+					url
+				}
+				highlights
+			}
 			interests {
 				name
 				summary
@@ -90,6 +100,16 @@ interface GetResumeRes {
 				summary: string;
 				highlights: string[];
 			}[];
+			contrib: {
+				name: string;
+				website: string;
+				summary: string;
+				pullRequests: {
+					id: string;
+					url: string;
+				}[];
+				highlights: string[];
+			}[];
 			interests: {
 				name: string;
 				summary: string;
@@ -98,7 +118,7 @@ interface GetResumeRes {
 	};
 }
 
-const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, work, projects, interests } } }) => {
+const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, work, projects, contrib, interests } } }) => {
 	const [forename, ...restOfName] = basics.name.split(' ');
 
 	return (
@@ -146,13 +166,23 @@ const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, w
 						/>
 					))} />
 
-					<Section title="Open Source" body={(): ReactNode => projects.map(p => (
+					<Section title="Open Source Projects" body={(): ReactNode => projects.map(p => (
 						<Experience
-							key={p.name + p.startDate}
+							key={p.name}
 							title={(): ReactNode => <a href={p.website} target="_blank" rel="noopener noreferrer">{p.name}</a>}
 							dates={[new Date(p.startDate), pipe(O.fromPredicate(not(isEmpty))(p.endDate), O.chain(fromString))]}
 							summary={p.summary}
 							tags={p.highlights}
+						/>
+					))} />
+
+					<Section title="Open Source Contributions" body={(): ReactNode => contrib.map(c => (
+						<Experience
+							key={c.name}
+							links={c.pullRequests.map(pr => ({ title: pr.id, url: pr.url }))}
+							title={(): ReactNode => <a href={c.website} target="_blank" rel="noopener noreferrer">{c.name}</a>}
+							summary={c.summary}
+							tags={c.highlights}
 						/>
 					))} />
 

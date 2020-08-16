@@ -79,6 +79,20 @@
 			"highlights": ["TypeScript", "React", "Gatsby"]
 		}
   ],
+	"contrib": [
+		{
+			"name": "Aura",
+			"website": "https://github.com/fosskers/aura",
+			"summary": "Aura is a command-line AUR (Arch User Repository) helper.",
+			"pullRequests": [
+				{
+					"id": "!624",
+					"url": "https://github.com/fosskers/aura/pull/624/"
+				}, { "id": "!1337", "url": "" }
+			],
+			"highlights": ["Haskell"]
+		}
+	],
   "interests": [
 		{
 			"name": "Mathematics",
