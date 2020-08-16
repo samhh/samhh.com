@@ -64,7 +64,7 @@
   "projects": [
     {
       "name": "Bukubrow",
-      "website": "https://github.com/samhh/bukubrow",
+      "website": "https://github.com/samhh/bukubrow-webext",
       "startDate": "2017-02-21",
 			"endDate": "",
 			"summary": "Bukubrow is a WebExtension for Buku, a command-line bookmark manager. It includes a native binary written in Rust that interfaces with the Buku database. The frontend is currently being rewritten in PureScript. As of time of writing, analytics from Firefox and Chrome suggest that this WebExtension is being actively used by several hundred people.",
