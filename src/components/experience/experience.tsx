@@ -11,6 +11,10 @@ interface Props {
 	title: string | (() => ReactNode);
 	dates?: [Date, Option<Date>];
 	summary: string;
+	links?: {
+		title: string;
+		url: string;
+	}[];
 	tags?: string[];
 }
 
@@ -25,6 +29,14 @@ const Experience: FunctionComponent<Props> = (props) => (
 		)}
 
 		<p className={s.summary}>{props.summary}</p>
+
+		{props.links && (
+			<ul className={s.links}>
+				{props.links.map(link => (
+					<li key={link.title}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a></li>
+				))}
+			</ul>
+		)}
 
 		{props.tags && !!props.tags.length && (
 			<ul className={s.tags}>

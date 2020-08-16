@@ -27,6 +27,20 @@
 	color: var(--color-text-offset);
 }
 
+.links {
+	list-style: none;
+	padding: 0;
+	font-size: 1.2em;
+}
+
+.links li {
+	display: inline-block;
+}
+
+.links li:not(:last-child) {
+	margin-right: 8px;
+}
+
 .tags {
 	list-style: none;
 	padding: 0;
