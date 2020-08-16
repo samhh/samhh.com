@@ -83,12 +83,12 @@
 		{
 			"name": "Aura",
 			"website": "https://github.com/fosskers/aura",
-			"summary": "Aura is a command-line AUR (Arch User Repository) helper.",
+			"summary": "Aura is a command-line AUR (Arch User Repository) helper. My contribution was aimed at adhering the configuration of Aura to the XDG standard.",
 			"pullRequests": [
 				{
 					"id": "!624",
 					"url": "https://github.com/fosskers/aura/pull/624/"
-				}, { "id": "!1337", "url": "" }
+				}
 			],
 			"highlights": ["Haskell"]
 		}
