@@ -79,11 +79,11 @@
 			"highlights": ["Rust", "TypeScript", "React", "Regex", "SQLite"]
 		},
 		{
-			"name": "Portfolio",
-			"website": "https://github.com/samhh/portfolio2019",
+			"name": "samhh.com",
+			"website": "https://github.com/samhh/samhh.com",
 			"startDate": "2019-02-09",
 			"endDate": "",
-			"summary": "This is the portfolio you're viewing right now! I've strived to make it maintainable above all else; it produces static files with Gatsby and can be easily deployed to countless service providers without any hassle.",
+			"summary": "This is the site you're viewing right now! I've strived to make it maintainable above all else; it produces static files with Gatsby and can be easily deployed to countless service providers without any hassle.",
 			"highlights": ["TypeScript", "React", "Gatsby"]
 		}
   ],

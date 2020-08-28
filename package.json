@@ -1,12 +1,12 @@
 {
-  "name": "portfolio2019",
+  "name": "samhh.com",
   "private": true,
-  "description": "A performant, minimalist, static portfolio.",
+  "description": "The statically-generated source for samhh.com",
   "version": "1.0.0",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/samhh/portfolio2019.git"
+    "url": "https://github.com/samhh/samhh.com.git"
   },
   "scripts": {
     "build": "gatsby build",
