@@ -32,6 +32,7 @@ const homepage: FunctionComponent = () => {
 					<ul className={s.contact}>
 						<li>{basics.location.city}, {basics.location.countryCode}</li>
 						<li><a href={`mailto:${basics.email}`}>Email</a></li>
+						<li><a href="/publickey.txt" target="_blank">PGP</a></li>
 
 						{basics.profiles.map(p => (
 							<li key={p.network}><a href={p.url} target="_blank" rel="noopener noreferrer">{p.network}</a></li>
