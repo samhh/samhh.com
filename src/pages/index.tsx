@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import { graphql } from 'gatsby';
+import resume from '../../data/resume.json';
 import s from './index.module.css';
 import * as O from 'fp-ts/lib/Option';
 import { pipe } from 'fp-ts/lib/pipeable';
@@ -12,113 +12,8 @@ import Helmet from 'react-helmet';
 import Quote from 'Components/quote/';
 import Section from 'Components/section/';
 
-export const query = graphql`
-	query Resume {
-		resume: dataJson {
-			basics {
-				name
-				label
-				email
-				website
-				summary
-				location {
-					city
-					countryCode
-				}
-				profiles {
-					network
-					username
-					url
-				}
-			}
-			work {
-				company
-				website
-				startDate
-				endDate
-				summary
-				highlights
-			}
-			projects {
-				name
-				website
-				startDate
-				endDate
-				summary
-				highlights
-			}
-			contrib {
-				name
-				website
-				summary
-				pullRequests {
-					id
-					url
-				}
-				highlights
-			}
-			interests {
-				name
-				summary
-			}
-		}
-	}
-`;
-
-interface GetResumeRes {
-	data: {
-		resume: {
-			basics: {
-				name: string;
-				label: string;
-				email: string;
-				website: string;
-				summary: string;
-				location: {
-					city: string;
-					countryCode: string;
-				};
-				profiles: {
-					network: string;
-					username: string;
-					url: string;
-				}[];
-			};
-			work: {
-				company: string;
-				website: string;
-				startDate: string;
-				endDate: string;
-				summary: string;
-				highlights: string[];
-			}[];
-			projects: {
-				name: string;
-				website: string;
-				startDate: string;
-				endDate: string;
-				summary: string;
-				highlights: string[];
-			}[];
-			contrib: {
-				name: string;
-				website: string;
-				summary: string;
-				pullRequests: {
-					id: string;
-					url: string;
-				}[];
-				highlights: string[];
-			}[];
-			interests: {
-				name: string;
-				summary: string;
-			}[];
-		};
-	};
-}
-
-const homepage: FunctionComponent<GetResumeRes> = ({ data: { resume: { basics, work, projects, contrib, interests } } }) => {
+const homepage: FunctionComponent = () => {
+	const { basics, work, projects, contrib, interests } = resume;
 	const [forename, ...restOfName] = basics.name.split(' ');
 
 	return (

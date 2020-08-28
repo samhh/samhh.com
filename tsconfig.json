@@ -4,6 +4,7 @@
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
 		"target": "esnext",
+		"resolveJsonModule": true,
 		"strict": true,
 		"lib": ["esnext", "dom"],
 		"jsx": "react",

@@ -19,13 +19,6 @@ module.exports = {
 			},
 		},
 		'gatsby-plugin-typescript',
-		'gatsby-transformer-json',
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				path: `${__dirname}/data/`,
-			}
-		},
 		{
       resolve: 'gatsby-plugin-alias-imports',
       options: {
