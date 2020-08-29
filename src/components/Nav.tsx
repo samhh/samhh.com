@@ -1,9 +1,8 @@
 import React, { ReactElement, ReactNode } from 'react';
 import s from './Nav.module.css';
 
-export enum Page {
+export enum NavPage {
 	Blog,
-	BlogPost,
 	Resume,
 }
 
@@ -14,7 +13,7 @@ const MaybeLinked = (p: { href: string; children: ReactNode; enabled: boolean })
 };
 
 type Props = {
-	activePage: Page;
+	activePage?: NavPage;
 };
 
 
@@ -30,9 +29,9 @@ const Nav = (p: Props): ReactElement => (
 			<li><a href="mailto:hello@samhh.com">Email</a></li>
 			<li><a href="/publickey.txt" target="_blank">PGP</a></li>
 			<li><a href="https://github.com/samhh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-			<li><MaybeLinked href="/" enabled={p.activePage !== Page.Blog}>Blog</MaybeLinked></li>
+			<li><MaybeLinked href="/" enabled={p.activePage !== NavPage.Blog}>Blog</MaybeLinked></li>
 			<li><a href="/rss.xml" target="_blank">RSS</a></li>
-			<li><MaybeLinked href="/resume" enabled={p.activePage !== Page.Resume}>Résumé</MaybeLinked></li>
+			<li><MaybeLinked href="/resume" enabled={p.activePage !== NavPage.Resume}>Résumé</MaybeLinked></li>
 		</ul>
 	</nav>
 );

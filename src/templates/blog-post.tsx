@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './blog-post.module.css';
 import Helmet from 'react-helmet';
-import Nav, { Page } from 'Components/Nav';
+import Nav, { NavPage } from 'Components/Nav';
 
 type Props = {
   data: {
@@ -24,7 +24,7 @@ const BlogPost = ({ data: { markdownRemark: { frontmatter: meta, html } } }: Pro
     </Helmet>
 
     <div className="u-page">
-      <Nav activePage={Page.BlogPost} />
+      <Nav />
 
       <header className={s.header}>
         <h1>{meta.title}</h1>

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
-import Nav, { Page } from 'Components/Nav';
+import Nav, { NavPage } from 'Components/Nav';
 import Helmet from 'react-helmet';
 
 type Props = {
@@ -26,7 +26,7 @@ const Index = ({ data: { allMarkdownRemark: { nodes } } }: Props): ReactElement 
 		</Helmet>
 
 		<div className="u-page">
-			<Nav activePage={Page.Blog} />
+			<Nav activePage={NavPage.Blog} />
 
 			<main>
 				<ol className={s.postList}>

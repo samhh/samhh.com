@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import resume from '../../data/resume.json';
 import s from './resume.module.css';
 import * as O from 'fp-ts/lib/Option';
@@ -6,14 +6,14 @@ import { pipe } from 'fp-ts/lib/pipeable';
 import { not } from 'fp-ts/lib/function';
 import { isEmpty } from 'Modules/string';
 import { fromString } from 'Modules/date';
-import Nav, { Page } from 'Components/Nav';
+import Nav, { NavPage } from 'Components/Nav';
 import Experience from 'Components/Experience';
 import Footer from 'Components/Footer';
 import Helmet from 'react-helmet';
 import Quote from 'Components/Quote';
 import Section from 'Components/Section';
 
-const homepage: FunctionComponent = () => {
+const Resume = (): ReactElement => {
 	const { basics, work, projects, contrib, interests } = resume;
 
 	return (
@@ -23,7 +23,7 @@ const homepage: FunctionComponent = () => {
 			</Helmet>
 
 			<div className="u-page">
-				<Nav activePage={Page.Resume} />
+				<Nav activePage={NavPage.Resume} />
 
 				<main>
 					<p className={s.intro}>
@@ -85,5 +85,5 @@ const homepage: FunctionComponent = () => {
 	);
 };
 
-export default homepage;
+export default Resume;
 
