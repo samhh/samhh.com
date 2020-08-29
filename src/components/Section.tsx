@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import Heading from 'Components/heading/';
+import Heading from 'Components/Heading';
 
 interface Props {
 	title: string;

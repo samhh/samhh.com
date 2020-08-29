@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import s from './quote.module.css';
+import s from './Quote.module.css';
 
 interface Props {
 	quote: string;

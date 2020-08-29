@@ -6,15 +6,14 @@ import { pipe } from 'fp-ts/lib/pipeable';
 import { not } from 'fp-ts/lib/function';
 import { isEmpty } from 'Modules/string';
 import { fromString } from 'Modules/date';
-import Experience from 'Components/experience/';
-import Footer from 'Components/footer/';
+import Experience from 'Components/Experience';
+import Footer from 'Components/Footer';
 import Helmet from 'react-helmet';
-import Quote from 'Components/quote/';
-import Section from 'Components/section/';
+import Quote from 'Components/Quote';
+import Section from 'Components/Section';
 
 const homepage: FunctionComponent = () => {
 	const { basics, work, projects, contrib, interests } = resume;
-	const [forename, ...restOfName] = basics.name.split(' ');
 
 	return (
 		<>
