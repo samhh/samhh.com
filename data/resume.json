@@ -1,31 +1,7 @@
 {
   "basics": {
-    "name": "Sam A. Horvath-Hunt",
-		"label": "Software Engineer",
-    "email": "hello@samhh.com",
-    "website": "https://samhh.com",
-    "summary": "Hi there! I'm a software engineer in London, currently working remotely, with a growing passion for pure functional programming in the likes of Haskell and PureScript.",
-    "location": {
-      "city": "London",
-      "countryCode": "GB"
-    },
-    "profiles": [
-      {
-        "network": "GitHub",
-        "username": "samhh",
-        "url": "https://github.com/samhh"
-      },
-      {
-        "network": "DEV",
-        "username": "samhh",
-        "url": "https://dev.to/samhh"
-      },
-      {
-        "network": "StackOverflow",
-        "username": "samhh",
-        "url": "https://stackoverflow.com/users/3369753/samhh"
-      }
-    ]
+    "label": "Software Engineer",
+    "summary": "Hi there! I'm a software engineer in London, currently working remotely, with a growing passion for pure functional programming in the likes of Haskell and PureScript."
   },
   "work": [
 		{
@@ -84,7 +60,7 @@
 			"startDate": "2019-02-09",
 			"endDate": "",
 			"summary": "This is the site you're viewing right now! I've strived to make it maintainable above all else; it produces static files with Gatsby and can be easily deployed to countless service providers without any hassle.",
-			"highlights": ["TypeScript", "React", "Gatsby"]
+			"highlights": ["TypeScript", "React", "Gatsby", "GraphQL"]
 		}
   ],
 	"contrib": [

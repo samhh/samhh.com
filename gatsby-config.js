@@ -25,6 +25,19 @@ module.exports = {
         alias: tsconfigAliases,
       },
     },
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/data/writings/published/`,
+				name: 'markdown-pages',
+			},
+		},
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: ['gatsby-remark-prismjs'],
+			},
+		},
 	],
 };
 

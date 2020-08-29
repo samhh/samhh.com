@@ -1,0 +1,3 @@
+[submodule "writings"]
+	path = data/writings
+	url = https://github.com/samhh/writings

@@ -9,22 +9,24 @@
 .info-primary,
 .info-secondary {
 	margin: 1em 0;
-	font-size: 1.8em;
 }
 
 .info-primary {
+	margin: 0;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 
 .info-secondary {
+	margin: 0;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
 .summary {
-	margin: 1.5em 0;
+	margin: .8em 0;
 	font-size: 1.6em 0;
 	font-weight: normal;
-	color: var(--color-text-offset);
 }
 
 .links {
@@ -38,13 +40,13 @@
 }
 
 .links li:not(:last-child) {
-	margin-right: 8px;
+	margin-right: .5rem;
 }
 
 .tags {
 	list-style: none;
 	padding: 0;
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 .tags li {
@@ -52,7 +54,7 @@
 }
 
 .tags li:not(:last-child) {
-	margin-right: 25px;
+	margin-right: 1.5rem;
 }
 
 .tags li::before {

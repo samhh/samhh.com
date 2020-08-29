@@ -1,5 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import Heading from 'Components/Heading';
+import s from './Section.module.css';
 
 interface Props {
 	title: string;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const Section: FunctionComponent<Props> = props => (
-	<section>
+	<section className={s.wrapper}>
 		<Heading>{props.title}</Heading>
 
 		{props.body()}
