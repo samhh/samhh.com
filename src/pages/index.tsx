@@ -6,6 +6,7 @@ import { pipe } from 'fp-ts/lib/pipeable';
 import { not } from 'fp-ts/lib/function';
 import { isEmpty } from 'Modules/string';
 import { fromString } from 'Modules/date';
+import Nav, { Page } from 'Components/Nav';
 import Experience from 'Components/Experience';
 import Footer from 'Components/Footer';
 import Helmet from 'react-helmet';
@@ -22,22 +23,7 @@ const homepage: FunctionComponent = () => {
 			</Helmet>
 
 			<div className={[s.page, 'u-width-limiter'].join(' ')}>
-				<header>
-					<h1 className={s.name}>
-						<strong>{forename}</strong>&nbsp;
-						<span>{restOfName.join(' ')}</span>
-					</h1>
-
-					<ul className={s.contact}>
-						<li>{basics.location.city}, {basics.location.countryCode}</li>
-						<li><a href={`mailto:${basics.email}`}>Email</a></li>
-						<li><a href="/publickey.txt" target="_blank">PGP</a></li>
-
-						{basics.profiles.map(p => (
-							<li key={p.network}><a href={p.url} target="_blank" rel="noopener noreferrer">{p.network}</a></li>
-						))}
-					</ul>
-				</header>
+				<Nav activePage={Page.Resume} />
 
 				<main>
 					<p className={s.intro}>
