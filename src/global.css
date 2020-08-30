@@ -21,7 +21,7 @@ body {
 	margin: 0;
 }
 
-p {
+ul, ol, p {
 	font-size: 1.6rem;
 }
 
