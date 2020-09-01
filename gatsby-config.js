@@ -11,7 +11,7 @@ const tsconfigAliases = Object.entries(tsconfig.compilerOptions.paths).reduce((a
 
 module.exports = {
 	siteMetadata: {
-		siteUrl: 'https://samhh.com',
+		siteUrl: 'https://www.samhh.com',
 		title: 'Sam A. Horvath-Hunt\'s blog',
 		description: 'Sam A. Horvath-Hunt\'s personal blog. Mostly about code and tech.',
 	},
