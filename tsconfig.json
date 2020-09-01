@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"module": "esnext",
+		"module": "commonjs",
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
 		"target": "esnext",
@@ -19,3 +19,4 @@
 		}
 	}
 }
+
