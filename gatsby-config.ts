@@ -125,5 +125,6 @@ export const plugins = [
 			plugins: ['gatsby-remark-prismjs', 'gatsby-remark-smartypants'],
 		},
 	},
+	'gatsby-plugin-no-javascript',
 ];
 
