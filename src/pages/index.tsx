@@ -33,7 +33,7 @@ const Index = ({ data: { allMarkdownRemark: { nodes } } }: Props): ReactElement 
 					{nodes.map(({ frontmatter: meta }) => (
 						<li key={meta.slug}>
 							<time dateTime={meta.date}>{meta.friendlyDate}</time><br />
-							<a href={`/blog/${meta.slug}`}>{meta.title}</a>
+							<a href={`/blog/${meta.slug}/`}>{meta.title}</a>
 						</li>
 					))}
 				</ol>

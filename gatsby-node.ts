@@ -33,7 +33,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
 	for (const { node: { frontmatter: { slug } } } of res.data?.allMarkdownRemark?.edges ?? []) {
 		createPage({
-			path: `/blog/${slug}`,
+			path: `/blog/${slug}/`,
 			component: template,
 			context: { slug },
 		});

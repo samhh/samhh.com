@@ -31,7 +31,7 @@ const Nav = (p: Props): ReactElement => (
 			<li><a href="https://github.com/samhh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
 			<li><MaybeLinked href="/" enabled={p.activePage !== NavPage.Blog}>Blog</MaybeLinked></li>
 			<li><a href="/rss.xml" target="_blank">RSS</a></li>
-			<li><MaybeLinked href="/resume" enabled={p.activePage !== NavPage.Resume}>Résumé</MaybeLinked></li>
+			<li><MaybeLinked href="/resume/" enabled={p.activePage !== NavPage.Resume}>Résumé</MaybeLinked></li>
 		</ul>
 	</nav>
 );
