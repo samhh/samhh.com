@@ -50,6 +50,7 @@ type FeedPostMeta = {
 };
 
 export const plugins = [
+	'gatsby-plugin-sitemap',
 	{
 		resolve: 'gatsby-plugin-feed',
 		options: {
