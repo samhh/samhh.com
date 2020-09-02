@@ -124,7 +124,7 @@ export const plugins = [
 	{
 		resolve: 'gatsby-transformer-remark',
 		options: {
-			plugins: ['gatsby-remark-prismjs', 'gatsby-remark-smartypants', 'gatsby-remark-autolink-headers'],
+			plugins: ['gatsby-remark-autolink-headers', 'gatsby-remark-prismjs', 'gatsby-remark-smartypants'],
 		},
 	},
 	'gatsby-plugin-no-javascript',
