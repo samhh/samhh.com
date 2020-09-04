@@ -6,6 +6,7 @@
 		"target": "esnext",
 		"resolveJsonModule": true,
 		"strict": true,
+		"skipLibCheck": true,
 		"lib": ["esnext", "dom"],
 		"jsx": "react",
 		"baseUrl": "./src/",

@@ -1,22 +1,25 @@
 import React, { ReactElement } from 'react';
+import { pipe } from 'fp-ts/lib/function';
+import * as O from 'fp-ts/lib/Option';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
 import Nav, { NavPage } from 'Components/Nav';
 import Helmet from 'react-helmet';
+import { isString } from 'Modules/string';
+import { IndexQuery } from '../../graphql-types';
+
+type MinimumViableEntry = {
+	slug: string;
+	title: string;
+	date: string;
+	friendlyDate: string;
+};
+
+const isViable = (x: Partial<Record<keyof MinimumViableEntry, unknown>>): x is MinimumViableEntry =>
+	[x.slug, x.title, x.date, x.friendlyDate].every(isString);
 
 type Props = {
-	data: {
-		allMarkdownRemark: {
-			nodes: {
-				frontmatter: {
-					slug: string;
-					title: string;
-					friendlyDate: string;
-					date: string;
-				};
-			}[];
-		};
-	};
+	data: IndexQuery;
 };
 
 const Index = ({ data: { allMarkdownRemark: { nodes } } }: Props): ReactElement => (
@@ -30,11 +33,17 @@ const Index = ({ data: { allMarkdownRemark: { nodes } } }: Props): ReactElement 
 
 			<main>
 				<ol className={s.postList}>
-					{nodes.map(({ frontmatter: meta }) => (
-						<li key={meta.slug}>
-							<time dateTime={meta.date}>{meta.friendlyDate}</time><br />
-							<a href={`/blog/${meta.slug}/`}>{meta.title}</a>
-						</li>
+					{nodes.map(x => pipe(
+						x.frontmatter,
+						O.fromNullable,
+						O.filter(isViable),
+						O.map(meta => (
+							<li key={meta.slug}>
+								<time dateTime={meta.date}>{meta.friendlyDate}</time><br />
+								<a href={`/blog/${meta.slug}/`}>{meta.title}</a>
+							</li>
+						)),
+						O.toNullable,
 					))}
 				</ol>
 			</main>
@@ -45,7 +54,7 @@ const Index = ({ data: { allMarkdownRemark: { nodes } } }: Props): ReactElement 
 export default Index;
 
 export const query = graphql`
-	query {
+	query Index {
 		allMarkdownRemark (sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
 			nodes {
 				frontmatter {

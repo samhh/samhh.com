@@ -109,6 +109,12 @@ export const plugins = [
 	},
 	'gatsby-plugin-typescript',
 	{
+		resolve: 'gatsby-plugin-graphql-codegen',
+		options: {
+			documentPaths: ['./src/**/*.{ts,tsx}', './gatsby-node.ts'],
+		},
+	},
+	{
 		resolve: 'gatsby-plugin-alias-imports',
 		options: {
 			alias: tsconfigAliases,

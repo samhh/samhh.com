@@ -3,43 +3,58 @@ import { graphql } from 'gatsby';
 import s from './blog-post.module.css';
 import Helmet from 'react-helmet';
 import Nav from 'Components/Nav';
+import { BlogPostQuery } from '../../graphql-types';
+import { isString } from 'Modules/string';
 
-type Props = {
-	data: {
-		markdownRemark: {
-			frontmatter: {
-				title: string;
-				friendlyDate: string;
-				date: string;
-			};
-			html: string;
-		};
-	};
+type MinimumViableMeta = {
+	title: string;
+	date: string;
+	friendlyDate: string;
 };
 
-const BlogPost = ({ data: { markdownRemark: { frontmatter: meta, html } } }: Props): ReactElement => (
-	<>
-		<Helmet>
-			<title>{meta.title}</title>
-		</Helmet>
+const isViableMeta = (x: Partial<Record<keyof MinimumViableMeta, unknown>>): x is MinimumViableMeta =>
+	[x.title, x.date, x.friendlyDate].every(isString);
 
-		<div className="u-page">
-			<Nav />
+type MinimumViable = {
+	html: string;
+	frontmatter: MinimumViableMeta;
+};
 
-			<header className={s.header}>
-				<h1>{meta.title}</h1>
-				<time dateTime={meta.date}>{meta.friendlyDate}</time>
-			</header>
+const isViable = (x: BlogPostQuery['markdownRemark']): x is MinimumViable =>
+	!!x && isString(x.html) && !!x.frontmatter && isViableMeta(x.frontmatter);
 
-			<main dangerouslySetInnerHTML={{ __html: html }} />
-		</div>
-	</>
-);
+type Props = {
+	data: BlogPostQuery;
+};
+
+const BlogPost = ({ data: { markdownRemark } }: Props): ReactElement | null => {
+	if (!isViable(markdownRemark)) return null;
+	const { html, frontmatter: meta } = markdownRemark;
+
+	return (
+		<>
+			<Helmet>
+				<title>{meta.title}</title>
+			</Helmet>
+
+			<div className="u-page">
+				<Nav />
+
+				<header className={s.header}>
+					<h1>{meta.title}</h1>
+					<time dateTime={meta.date}>{meta.friendlyDate}</time>
+				</header>
+
+				<main dangerouslySetInnerHTML={{ __html: html }} />
+			</div>
+		</>
+	);
+};
 
 export default BlogPost;
 
 export const postQuery = graphql`
-	query($slug: String!) {
+	query BlogPost($slug: String!) {
 		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
 			html
 			frontmatter {

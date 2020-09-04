@@ -1,5 +1,6 @@
 import { GatsbyNode } from 'gatsby';
 import { createFilePath } from 'gatsby-source-filesystem';
+import { CreatePagesQuery } from './graphql-types';
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, actions: { createNodeField } }) => {
 	if (node.internal.type !== 'MarkdownRemark') return;
@@ -11,9 +12,8 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
 export const createPages: GatsbyNode['createPages'] = async ({ actions: { createPage }, graphql, reporter }) => {
 	const template = require.resolve('./src/templates/blog-post.tsx');
 
-	type Res = { allMarkdownRemark: { edges: { node: { frontmatter: { slug: string } } }[] } };
-	const res = await graphql<Res>(`
-		{
+	const res = await graphql<CreatePagesQuery>(`
+		query CreatePages {
 			allMarkdownRemark {
 				edges {
 					node {
@@ -31,11 +31,13 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 		return;
 	}
 
-	for (const { node: { frontmatter: { slug } } } of res.data?.allMarkdownRemark?.edges ?? []) {
+	for (const { node: { frontmatter: meta } } of res.data?.allMarkdownRemark?.edges ?? []) {
+		if (!meta?.slug) continue;
+
 		createPage({
-			path: `/blog/${slug}/`,
+			path: `/blog/${meta.slug}/`,
 			component: template,
-			context: { slug },
+			context: { slug: meta.slug },
 		});
 	}
 };
