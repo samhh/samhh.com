@@ -1,89 +1,187 @@
 import React, { ReactElement, ReactNode } from 'react';
-import resume from '../../data/resume.json';
 import s from './resume.module.css';
 import * as O from 'fp-ts/lib/Option';
-import { pipe } from 'fp-ts/lib/pipeable';
-import { not } from 'fp-ts/lib/function';
-import { isEmpty } from 'Modules/string';
-import { fromString } from 'Modules/date';
 import Nav, { NavPage } from 'Components/Nav';
 import Experience from 'Components/Experience';
 import Footer from 'Components/Footer';
 import Helmet from 'react-helmet';
 import Quote from 'Components/Quote';
 import Section from 'Components/Section';
+import { Contribution, Hobby, Project, Work } from 'Modules/resume';
 
-const Resume = (): ReactElement => {
-	const { basics, work, projects, contrib, interests } = resume;
+const work: NonEmptyArray<Work> = [
+	{
+		company: 'Adaptavist',
+		website: new URL('https://www.adaptavist.com'),
+		startDate: new Date('2018-12-11'),
+		endDate: O.none,
+		summary: 'At Adaptavist I\'ve spent considerable time refactoring the untyped codebase to strict TypeScript, improving quality, safety, and maintainability along the way. I\'m a strong voice for best practices within my team, and am a positive proponent of pure functional programming to the wider department. I\'ve also begun leading the way on testing, introducing property-based testing to our unit tests and integration testing to our React components. I regularly pair with and mentor teammates.',
+		highlights: ['TypeScript', 'React', 'Node', 'Testing', 'Microservices'],
+	},
+	{
+		company: 'Oddschecker',
+		website: new URL('https://www.oddschecker.com'),
+		startDate: new Date('2017-02-28'),
+		endDate: O.some(new Date('2018-12-10')),
+		summary: 'At Oddschecker I pioneered a greenfield B2B project utilising React and D3 on the frontend and Node on the backend. I was introduced to static typing via TypeScript, something I now can\'t see myself ever leaving behind. I was, as ever, perennially focused on code quality and long-term maintainability, and I matured significantly as a developer as it pertains to balancing overt business interests against tech debt. I also began to mentor more junior members of the team.',
+		highlights: ['TypeScript', 'React', 'D3', 'Node', 'MongoDB'],
+	},
+	{
+		company: 'Impero',
+		website: new URL('https://weareimpero.com'),
+		startDate: new Date('2015-12-07'),
+		endDate: O.some(new Date('2017-02-25')),
+		summary: 'My work at Impero was predominantly frontend-heavy and really challenged me to get to grips with the wonderful disaster that is CSS, as well as more importantly level up my JavaScript ability. By the end of my time here I was proficient in vanilla JavaScript and beginning to enter the world of functional reactive programming with Vue.',
+		highlights: ['JavaScript', 'Vue', 'Node.js', 'Stylus', 'PostCSS'],
+	},
+	{
+		company: 'Perspective Publishing',
+		website: new URL('https://www.perspectivepublishing.com'),
+		startDate: new Date('2014-03-03'),
+		endDate: O.some(new Date('2015-12-04')),
+		summary: 'I designed and implemented the majority of Perspective\'s websites. Additionally I began the rewrite of the internal company CMS, converging dozens of legacy systems into a single unified experience. Prior to leaving I lobbied for a change from archaic FTP uploads to a version control system.',
+		highlights: ['HTML', 'CSS', 'Sass', 'PHP', 'MySQL', 'Git'],
+	},
+];
 
-	return (
-		<>
-			<Helmet>
-				<title>Sam A. Horvath-Hunt's résumé — Software Engineer</title>
-			</Helmet>
+const projects: NonEmptyArray<Project> = [
+	{
+		name: 'terpod',
+		website: new URL('https://github.com/samhh/terpod'),
+		startDate: new Date('2020-08-11'),
+		endDate: O.none,
+		summary: 'terpod is a terminal podcast manager in the early stages of development, written in Haskell. It allows the user to sync feeds, list feed episodes, and download episodes on demand.',
+		highlights: ['Haskell'],
+	},
+	{
+		name: 'Bukubrow',
+		website: new URL('https://github.com/samhh/bukubrow-webext'),
+		startDate: new Date('2017-02-21'),
+		endDate: O.none,
+		summary: 'Bukubrow is a WebExtension for Buku, a command-line bookmark manager. It includes a native binary written in Rust that interfaces with the Buku database. As of time of writing, analytics from Firefox and Chrome suggest that this WebExtension is being actively used by several hundred people. There is a work-in-progress branch in which the frontend is being rewritten in PureScript with Halogen.',
+		highlights: ['Rust', 'TypeScript', 'React', 'Regex', 'SQLite'],
+	},
+	{
+		name: 'samhh.com',
+		website: new URL('https://github.com/samhh/samhh.com'),
+		startDate: new Date('2019-02-09'),
+		endDate: O.none,
+		summary: 'This is the site you\'re viewing right now! I\'ve strived to make it maintainable above all else; it produces static files with Gatsby and can be easily deployed to countless service providers without any hassle.',
+		highlights: ['TypeScript', 'React', 'Gatsby', 'GraphQL'],
+	},
+];
 
-			<div className="u-page">
-				<Nav activePage={NavPage.Resume} />
+const contrib: NonEmptyArray<Contribution> = [
+	{
+		name: 'Aura',
+		website: new URL('https://github.com/fosskers/aura'),
+		summary: 'Aura is a command-line AUR (Arch User Repository) helper. My contribution was aimed at adhering the configuration of Aura to the XDG standard.',
+		changesets: [
+			{
+				id: '!624',
+				url: new URL('https://github.com/fosskers/aura/pull/624/'),
+			},
+		],
+		highlights: ['Haskell'],
+	},
+	{
+		name: 'fp-ts-contrib',
+		website: new URL('https://github.com/gcanti/fp-ts-contrib'),
+		summary: 'fp-ts-contrib is a community-driven utility package for fp-ts, a library which enables typed functional programming in TypeScript. My contribution added the filterA module, which enables filtering an array with an applicative predicate.',
+		changesets: [
+			{
+				id: '!56',
+				url: new URL('https://github.com/gcanti/fp-ts-contrib/pull/56'),
+			},
+		],
+		highlights: ['TypeScript'],
+	},
+];
 
-				<main>
-					<p className={s.intro}>
-						<strong>{basics.label}</strong>&nbsp;
+const hobbies: NonEmptyArray<Hobby> = [
+	{
+		name: 'Mathematics',
+		summary: 'Functional programming has reintroduced me to mathematics, the subject I always felt an affinity for. I\'m working my way through Khan Academy at the moment.'
+	},
+	{
+		name: 'Linux',
+		summary: 'Perhaps unsurprisingly as a software engineer I enjoy working with computers. I\'ve built my own PC on which I run Arch Linux, and even game on it for everything not in VR. I use xmonad, configured in Haskell, as my tiling window manager, and (n)vim is my preferred modal editor. I live on the command-line.'
+	},
+	{
+		name: 'Running & Self-Improvement',
+		summary: 'I\'ve found that working remotely enables me to run more frequently. I\'m still not very fast over long distances, but I\'m getting there, recently hitting the beginner\'s milestone of 5km in 30 minutes. Self-improvement in all aspects of life is very important to me; there is nothing worse than stagnation.'
+	},
+	{
+		name: 'Gaming',
+		summary: 'I\'m an avid gamer, currently predominantly spending my time with Deep Rock Galactic and Half-Life: Alyx. I hit Grand Champion in Rocket League a while back and decided that was the right time to take it out of my regular rotation, but feel free to hit me up for a game!'
+	},
+];
 
-						{basics.summary}
-					</p>
+const Resume = (): ReactElement => (
+	<>
+		<Helmet>
+			<title>Sam A. Horvath-Hunt's résumé — Software Engineer</title>
+		</Helmet>
 
-					<Quote
-						quote="Quality is pride of workmanship."
-						author="W. Edwards Deming"
-					/>
+		<div className='u-page'>
+			<Nav activePage={NavPage.Resume} />
 
-					<Section title="Jobs" body={(): ReactNode => work.map(j => (
-						<Experience
-							key={j.startDate}
-							title={(): ReactNode => <a href={j.website} target="_blank" rel="noopener noreferrer">{j.company}</a>}
-							dates={[new Date(j.startDate), pipe(O.fromPredicate(not(isEmpty))(j.endDate), O.chain(fromString))]}
-							summary={j.summary}
-							tags={j.highlights}
-						/>
-					))} />
+			<main>
+				<p className={s.intro}>
+					<strong>Software Engineer</strong>&nbsp;Hi there! I'm a software engineer in London, currently working remotely, with a growing passion for pure functional programming in the likes of Haskell.
+				</p>
 
-					<Section title="Open Source Projects" body={(): ReactNode => projects.map(p => (
-						<Experience
-							key={p.name}
-							title={(): ReactNode => <a href={p.website} target="_blank" rel="noopener noreferrer">{p.name}</a>}
-							dates={[new Date(p.startDate), pipe(O.fromPredicate(not(isEmpty))(p.endDate), O.chain(fromString))]}
-							summary={p.summary}
-							tags={p.highlights}
-						/>
-					))} />
-
-					<Section title="Open Source Contributions" body={(): ReactNode => contrib.map(c => (
-						<Experience
-							key={c.name}
-							links={c.pullRequests.map(pr => ({ title: pr.id, url: pr.url }))}
-							title={(): ReactNode => <a href={c.website} target="_blank" rel="noopener noreferrer">{c.name}</a>}
-							summary={c.summary}
-							tags={c.highlights}
-						/>
-					))} />
-
-					<Section title="Hobbies" body={(): ReactNode => interests.map(h => (
-						<Experience
-							key={h.name}
-							title={h.name}
-							summary={h.summary}
-						/>
-					))} />
-				</main>
-
-				<Footer
-					title="References"
-					description="Available upon request."
+				<Quote
+					quote='Quality is pride of workmanship.'
+					author='W. Edwards Deming'
 				/>
-			</div>
-		</>
-	);
-};
+
+				<Section title='Jobs' body={(): ReactNode => work.map(j => (
+					<Experience
+						key={j.company}
+						title={(): ReactNode => <a href={j.website.href} target='_blank' rel='noopener noreferrer'>{j.company}</a>}
+						dates={[j.startDate, j.endDate]}
+						summary={j.summary}
+						tags={j.highlights}
+					/>
+				))} />
+
+				<Section title='Open Source Projects' body={(): ReactNode => projects.map(p => (
+					<Experience
+						key={p.name}
+						title={(): ReactNode => <a href={p.website.href} target='_blank' rel='noopener noreferrer'>{p.name}</a>}
+						dates={[new Date(p.startDate), p.endDate]}
+						summary={p.summary}
+						tags={p.highlights}
+					/>
+				))} />
+
+				<Section title='Open Source Contributions' body={(): ReactNode => contrib.map(c => (
+					<Experience
+						key={c.name}
+						links={c.changesets.map(ch => ({ title: ch.id, url: ch.url }))}
+						title={(): ReactNode => <a href={c.website.href} target='_blank' rel='noopener noreferrer'>{c.name}</a>}
+						summary={c.summary}
+						tags={c.highlights}
+					/>
+				))} />
+
+				<Section title='Hobbies' body={(): ReactNode => hobbies.map(h => (
+					<Experience
+						key={h.name}
+						title={h.name}
+						summary={h.summary}
+					/>
+				))} />
+			</main>
+
+			<Footer
+				title='References'
+				description='Available upon request.'
+			/>
+		</div>
+	</>
+);
 
 export default Resume;
 

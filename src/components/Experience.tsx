@@ -13,7 +13,7 @@ interface Props {
 	summary: string;
 	links?: {
 		title: string;
-		url: string;
+		url: URL;
 	}[];
 	tags?: string[];
 }
@@ -33,7 +33,7 @@ const Experience: FunctionComponent<Props> = (props) => (
 		{props.links && (
 			<ul className={s.links}>
 				{props.links.map(link => (
-					<li key={link.title}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a></li>
+					<li key={link.title}><a href={link.url.href} target="_blank" rel="noopener noreferrer">{link.title}</a></li>
 				))}
 			</ul>
 		)}
