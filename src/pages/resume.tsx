@@ -62,6 +62,14 @@ const projects: NonEmptyArray<Project> = [
 		highlights: ['Rust', 'TypeScript', 'React', 'Regex', 'SQLite'],
 	},
 	{
+		name: 'bangin',
+		website: new URL('https://github.com/samhh/bangin'),
+		startDate: new Date('2020-09-16'),
+		endDate: O.none,
+		summary: 'bangin is a deliberately small, thoughtfully-designed shell script which replicates the behaviour of DuckDuckGo\'s bangs on the command-line.',
+		highlights: ['POSIX Shell'],
+	},
+	{
 		name: 'samhh.com',
 		website: new URL('https://github.com/samhh/samhh.com'),
 		startDate: new Date('2019-02-09'),
