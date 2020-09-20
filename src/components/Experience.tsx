@@ -32,7 +32,7 @@ const Experience: FunctionComponent<Props> = (props) => (
 
 		{props.links && (
 			<ul className={s.links}>
-				{props.links.concat(props.links).map(link => (
+				{props.links.map(link => (
 					<li key={link.title}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a></li>
 				))}
 			</ul>
