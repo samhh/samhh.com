@@ -3,6 +3,7 @@
 		"module": "commonjs",
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
+		"resolveJsonModule": true,
 		"target": "esnext",
 		"strict": true,
 		"skipLibCheck": true,
