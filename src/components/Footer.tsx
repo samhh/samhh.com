@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import Heading from 'Components/Heading';
 
-interface Props {
+type Props = {
 	title: string;
 	description: string;
-}
+};
 
 const Footer: FunctionComponent<Props> = props => (
 	<footer>

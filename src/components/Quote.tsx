@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import s from './Quote.module.css';
 
-interface Props {
+type Props = {
 	quote: string;
 	author: string;
-}
+};
 
 const Quote: FunctionComponent<Props> = props => (
 	<blockquote className={s.quote}>

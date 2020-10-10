@@ -7,7 +7,7 @@ import s from './Experience.module.css';
 const fmt = formatDate('MMMM yyyy');
 const fmtCurr = O.fold(constant('Present'), fmt);
 
-interface Props {
+type Props = {
 	title: string | (() => ReactNode);
 	dates?: [Date, Option<Date>];
 	summary: string;
@@ -16,7 +16,7 @@ interface Props {
 		url: URL;
 	}[];
 	tags?: string[];
-}
+};
 
 const Experience: FunctionComponent<Props> = (props) => (
 	<div className={s.wrapper}>
