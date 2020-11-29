@@ -54,6 +54,14 @@ const projects: NonEmptyArray<Project> = [
 		highlights: ['Haskell'],
 	},
 	{
+		name: 'fp-ts-std',
+		website: new URL('https://github.com/samhh/fp-ts-std'),
+		startDate: new Date('2020-10-19'),
+		endDate: O.none,
+		summary: 'fp-ts-std is a library targeting the fp-ts ecosystem, aiming to be something of a pseudo-standard library, fill in the gaps between fp-ts and Ramda, and generally flesh out what\'s missing in the parent library.',
+		highlights: ['TypeScript', 'fp-ts'],
+	},
+	{
 		name: 'Bukubrow',
 		website: new URL('https://github.com/samhh/bukubrow-webext'),
 		startDate: new Date('2017-02-21'),
