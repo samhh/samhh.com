@@ -46,12 +46,20 @@ const work: NonEmptyArray<Work> = [
 
 const projects: NonEmptyArray<Project> = [
 	{
+		name: 'tshm',
+		website: new URL('https://github.com/samhh/tshm'),
+		startDate: new Date('2020-12-10'),
+		endDate: O.none,
+		summary: 'tshm is a parser and formatter for TypeScript declarations that outputs HM-style type signatures. The parser is implemented as a recursive descent parser.',
+		highlights: ['Haskell', 'megaparsec', 'optparse-applicative'],
+	},
+	{
 		name: 'terpod',
 		website: new URL('https://github.com/samhh/terpod'),
 		startDate: new Date('2020-08-11'),
 		endDate: O.none,
-		summary: 'terpod is a terminal podcast manager in the early stages of development, written in Haskell. It allows the user to sync feeds, list feed episodes, and download episodes on demand.',
-		highlights: ['Haskell'],
+		summary: 'terpod is a terminal podcast manager written in Haskell. It allows the user to sync feeds, list feed episodes, and download episodes on demand.',
+		highlights: ['Haskell', 'optparse-applicative'],
 	},
 	{
 		name: 'fp-ts-std',
