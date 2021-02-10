@@ -111,7 +111,9 @@ export const plugins = [
 	{
 		resolve: 'gatsby-plugin-alias-imports',
 		options: {
-			alias: tsconfigAliases,
+			alias: {
+				'~': 'src'
+			},
 		},
 	},
 	{

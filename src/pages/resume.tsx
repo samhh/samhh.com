@@ -1,13 +1,13 @@
 import React, { ReactElement, ReactNode } from 'react';
 import s from './resume.module.css';
 import * as O from 'fp-ts/lib/Option';
-import Nav, { NavPage } from 'Components/Nav';
-import Experience from 'Components/Experience';
-import Footer from 'Components/Footer';
+import Nav, { NavPage } from '~/components/Nav';
+import Experience from '~/components/Experience';
+import Footer from '~/components/Footer';
 import Helmet from 'react-helmet';
-import Quote from 'Components/Quote';
-import Section from 'Components/Section';
-import { Contribution, Hobby, Project, Work } from 'Modules/resume';
+import Quote from '~/components/Quote';
+import Section from '~/components/Section';
+import { Contribution, Hobby, Project, Work } from '~/modules/resume';
 
 const work: NonEmptyArray<Work> = [
 	{

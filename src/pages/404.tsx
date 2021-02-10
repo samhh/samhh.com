@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Helmet from 'react-helmet';
-import Nav from 'Components/Nav';
+import Nav from '~/components/Nav';
 
 const FourZeroFour = (): ReactElement => (
 	<>

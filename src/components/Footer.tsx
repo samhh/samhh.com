@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import Heading from 'Components/Heading';
+import Heading from '~/components/Heading';
 
 type Props = {
 	title: string;

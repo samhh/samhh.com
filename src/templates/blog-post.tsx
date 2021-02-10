@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './blog-post.module.css';
 import Helmet from 'react-helmet';
-import Nav from 'Components/Nav';
+import Nav from '~/components/Nav';
 
 type Props = {
 	data: {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
-import Nav, { NavPage } from 'Components/Nav';
+import Nav, { NavPage } from '~/components/Nav';
 import Helmet from 'react-helmet';
 
 type Props = {

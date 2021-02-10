@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import Heading from 'Components/Heading';
+import Heading from '~/components/Heading';
 import s from './Section.module.css';
 
 type Props = {
