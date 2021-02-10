@@ -16,7 +16,7 @@ const work: NonEmptyArray<Work> = [
 		startDate: new Date('2018-12-11'),
 		endDate: O.none,
 		summary: 'At Adaptavist I\'ve spent considerable time refactoring the untyped codebase to strict TypeScript, improving quality, safety, and maintainability along the way. I\'m a strong voice for best practices within my team, and am a positive proponent of pure functional programming to the wider department. I\'ve also begun leading the way on testing, introducing property-based testing to our unit tests and integration testing to our React components. I regularly pair with and mentor teammates.',
-		highlights: ['TypeScript', 'React', 'Node', 'Testing', 'Microservices'],
+		highlights: ['TypeScript', 'React', 'Node', 'Testing', 'Microservices', 'AWS Lambda'],
 	},
 	{
 		company: 'Oddschecker',
