@@ -18,21 +18,3 @@
   font-size: 1.5rem;
   font-weight: normal;
 }
-
-.links {
-  list-style: none;
-  padding: 0;
-  font-size: 1.2em;
-}
-
-.links li {
-  display: inline-block;
-}
-
-.links li:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.tags {
-  font-size: 1.4em;
-}

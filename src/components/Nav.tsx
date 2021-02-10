@@ -4,6 +4,7 @@ import s from "./Nav.module.css"
 export enum NavPage {
   Blog,
   Resume,
+  Software,
 }
 
 const MaybeLinked = (p: {
@@ -40,6 +41,14 @@ const Nav = (p: Props): ReactElement => (
       <li>
         <MaybeLinked href="/" enabled={p.activePage !== NavPage.Blog}>
           Blog
+        </MaybeLinked>
+      </li>
+      <li>
+        <MaybeLinked
+          href="/software/"
+          enabled={p.activePage !== NavPage.Software}
+        >
+          Software
         </MaybeLinked>
       </li>
       <li>

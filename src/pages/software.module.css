@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  margin: 2.5rem 0;
+}
+
+.title {
+  margin: 0.5rem 0;
+  font-size: 1.4em;
+}
+
+.desc {
+  margin: 0;
+}
