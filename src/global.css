@@ -1,47 +1,48 @@
 /* Reasonable defaults */
 :root {
-	--min-site-width: 320px;
-	--max-site-width: 650px;
+  --min-site-width: 320px;
+  --max-site-width: 650px;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	min-width: var(--min-site-width);
-	box-sizing: border-box;
-	line-height: 1.6;
-	font-size: 62.5%;
+  min-width: var(--min-site-width);
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-size: 62.5%;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
-ul, ol, p {
-	font-size: 1.6rem;
+ul,
+ol,
+p {
+  font-size: 1.6rem;
 }
 
 /* Universal utilities */
 .u-page {
-	max-width: var(--max-site-width);
-	margin: 0 auto;
-	padding: 10rem 1.5rem;
+  max-width: var(--max-site-width);
+  margin: 0 auto;
+  padding: 10rem 1.5rem;
 }
 
 /* Override markdown syntax highlighting */
 .gatsby-highlight {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .token.operator {
-	background: none !important;
+  background: none !important;
 }
 
 .language-text {
-	font-size: .9em !important;
+  font-size: 0.9em !important;
 }
-

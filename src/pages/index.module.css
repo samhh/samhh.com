@@ -1,10 +1,9 @@
 .post-list {
-	list-style: none;
-	padding: 0;
-	font-size: 1.6rem;
+  list-style: none;
+  padding: 0;
+  font-size: 1.6rem;
 }
 
 .post-list li + li {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
-

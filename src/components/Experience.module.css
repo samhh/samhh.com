@@ -1,62 +1,62 @@
 .wrapper {
-	margin: 2em 0;
+  margin: 2em 0;
 }
 
 .wrapper + .wrapper {
-	margin-top: 4em;
+  margin-top: 4em;
 }
 
 .info-primary,
 .info-secondary {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 
 .info-primary {
-	margin: 0;
-	font-size: 1.8em;
-	font-weight: bold;
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 .info-secondary {
-	margin: 0;
-	font-size: 1.5em;
-	font-weight: normal;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
 .summary {
-	margin: .8em 0;
-	font-size: 1.6em 0;
-	font-weight: normal;
+  margin: 0.8em 0;
+  font-size: 1.6em 0;
+  font-weight: normal;
 }
 
 .links {
-	list-style: none;
-	padding: 0;
-	font-size: 1.2em;
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
 }
 
 .links li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .links li:not(:last-child) {
-	margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .tags {
-	list-style: none;
-	padding: 0;
-	font-size: 1.4em;
+  list-style: none;
+  padding: 0;
+  font-size: 1.4em;
 }
 
 .tags li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .tags li:not(:last-child) {
-	margin-right: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .tags li::before {
-	content: '+ ';
+  content: "+ ";
 }

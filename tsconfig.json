@@ -1,20 +1,17 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"allowSyntheticDefaultImports": true,
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"target": "esnext",
-		"strict": true,
-		"skipLibCheck": true,
-		"lib": ["esnext", "dom"],
-		"jsx": "react-jsx",
-		"baseUrl": "./src/",
-		"paths": {
-			"~/*": [
-				"./*"
-			]
-		}
-	}
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["esnext", "dom"],
+    "jsx": "react-jsx",
+    "baseUrl": "./src/",
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
 }
-
