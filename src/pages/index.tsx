@@ -2,6 +2,7 @@ import { ReactElement } from "react"
 import { graphql } from "gatsby"
 import s from "./index.module.css"
 import Nav, { NavPage } from "~/components/Nav"
+import Footer from "~/components/Footer"
 import Helmet from "react-helmet"
 
 type Props = {
@@ -43,6 +44,14 @@ const Index = ({
           ))}
         </ol>
       </main>
+
+      <Footer>
+        <p>
+          <a href="/rss.xml" target="_blank">
+            RSS feed
+          </a>
+        </p>
+      </Footer>
     </div>
   </>
 )
