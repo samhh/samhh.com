@@ -12,7 +12,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "typecheck": "tsc --noEmit",
-    "typecheck-dev": "tsc -w --noEmit",
     "serve": "gatsby serve",
     "lint": "eslint ./src/ --ext ts,tsx"
   },
