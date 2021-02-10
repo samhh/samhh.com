@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import s from './resume.module.css';
-import * as O from 'fp-ts/lib/Option';
+import * as O from 'fp-ts/Option';
 import Nav, { NavPage } from '~/components/Nav';
 import Experience from '~/components/Experience';
 import Footer from '~/components/Footer';

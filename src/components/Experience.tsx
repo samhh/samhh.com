@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
-import * as O from 'fp-ts/lib/Option';
-import { constant } from 'fp-ts/lib/function';
+import * as O from 'fp-ts/Option';
+import { constant } from 'fp-ts/function';
 import formatDate from 'date-fns/fp/format';
 import s from './Experience.module.css';
 

@@ -1,12 +1,13 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint', 'functional', 'react'],
+	plugins: ['@typescript-eslint', 'functional', 'fp-ts', 'react'],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:functional/all',
+		'plugin:fp-ts/all',
 		'plugin:react/recommended',
 	],
 	parserOptions: {
@@ -35,6 +36,8 @@ module.exports = {
 		'functional/no-mixed-type': 0,
 		// Needless if adhering to FP idioms
 		'functional/prefer-readonly-type': 0,
+		// Less ergonomic
+		'fp-ts/no-module-imports': 0,
 	},
 };
 
