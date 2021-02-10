@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import Heading from '~/components/Heading';
 import s from './Section.module.css';
 

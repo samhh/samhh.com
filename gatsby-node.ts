@@ -1,6 +1,16 @@
 import { GatsbyNode } from 'gatsby';
 import { createFilePath } from 'gatsby-source-filesystem';
 
+// Until it's the default behaviour:
+// https://github.com/gatsbyjs/gatsby/issues/28657
+export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = ({ actions }) =>
+	actions.setBabelPlugin({
+		name: '@babel/plugin-transform-react-jsx',
+		options: {
+			runtime: 'automatic',
+		},
+	});
+
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, actions: { createNodeField } }) => {
 	if (node.internal.type !== 'MarkdownRemark') return;
 

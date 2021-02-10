@@ -23,6 +23,8 @@ module.exports = {
 	rules: {
 		// Unneeded w/ TypeScript
 		'react/prop-types': 0,
+		// Unneeded w/ React v17
+		'react/react-in-jsx-scope': 0,
 		// Bad cost/value
 		'react/no-unescaped-entities': 0,
 		// Bad cost/value

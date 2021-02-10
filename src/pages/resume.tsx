@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import s from './resume.module.css';
 import * as O from 'fp-ts/lib/Option';
 import Nav, { NavPage } from '~/components/Nav';

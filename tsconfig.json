@@ -8,7 +8,7 @@
 		"strict": true,
 		"skipLibCheck": true,
 		"lib": ["esnext", "dom"],
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"baseUrl": "./src/",
 		"paths": {
 			"~/*": [

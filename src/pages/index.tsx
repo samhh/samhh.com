@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './index.module.css';
 import Nav, { NavPage } from '~/components/Nav';

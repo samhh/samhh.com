@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import s from './blog-post.module.css';
 import Helmet from 'react-helmet';

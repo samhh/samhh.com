@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import Helmet from 'react-helmet';
 import Nav from '~/components/Nav';
 
