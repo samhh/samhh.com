@@ -39,4 +39,4 @@ module.exports = {
     // Less ergonomic
     "fp-ts/no-module-imports": 0,
   },
-};
+}

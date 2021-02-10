@@ -1,24 +1,24 @@
-import { FunctionComponent, ReactNode } from "react";
-import * as O from "fp-ts/Option";
-import { constant } from "fp-ts/function";
-import formatDate from "date-fns/fp/format";
-import s from "./Experience.module.css";
+import { FunctionComponent, ReactNode } from "react"
+import * as O from "fp-ts/Option"
+import { constant } from "fp-ts/function"
+import formatDate from "date-fns/fp/format"
+import s from "./Experience.module.css"
 
-const fmt = formatDate("MMMM yyyy");
-const fmtCurr = O.fold(constant("Present"), fmt);
+const fmt = formatDate("MMMM yyyy")
+const fmtCurr = O.fold(constant("Present"), fmt)
 
 type Props = {
-  title: string | (() => ReactNode);
-  dates?: [Date, Option<Date>];
-  summary: string;
+  title: string | (() => ReactNode)
+  dates?: [Date, Option<Date>]
+  summary: string
   links?: {
-    title: string;
-    url: URL;
-  }[];
-  tags?: string[];
-};
+    title: string
+    url: URL
+  }[]
+  tags?: string[]
+}
 
-const Experience: FunctionComponent<Props> = (props) => (
+const Experience: FunctionComponent<Props> = props => (
   <div className={s.wrapper}>
     <h2 className={s.infoPrimary}>
       {typeof props.title === "string" ? props.title : props.title()}
@@ -34,7 +34,7 @@ const Experience: FunctionComponent<Props> = (props) => (
 
     {props.links && (
       <ul className={s.links}>
-        {props.links.map((link) => (
+        {props.links.map(link => (
           <li key={link.title}>
             <a href={link.url.href} target="_blank" rel="noopener noreferrer">
               {link.title}
@@ -46,12 +46,12 @@ const Experience: FunctionComponent<Props> = (props) => (
 
     {props.tags && !!props.tags.length && (
       <ul className={s.tags}>
-        {props.tags.map((tag) => (
+        {props.tags.map(tag => (
           <li key={tag}>{tag}</li>
         ))}
       </ul>
     )}
   </div>
-);
+)
 
-export default Experience;
+export default Experience

@@ -1,23 +1,23 @@
-import { ReactElement } from "react";
-import { graphql } from "gatsby";
-import s from "./index.module.css";
-import Nav, { NavPage } from "~/components/Nav";
-import Helmet from "react-helmet";
+import { ReactElement } from "react"
+import { graphql } from "gatsby"
+import s from "./index.module.css"
+import Nav, { NavPage } from "~/components/Nav"
+import Helmet from "react-helmet"
 
 type Props = {
   data: {
     allMarkdownRemark: {
       nodes: {
         frontmatter: {
-          slug: string;
-          title: string;
-          friendlyDate: string;
-          date: string;
-        };
-      }[];
-    };
-  };
-};
+          slug: string
+          title: string
+          friendlyDate: string
+          date: string
+        }
+      }[]
+    }
+  }
+}
 
 const Index = ({
   data: {
@@ -45,9 +45,9 @@ const Index = ({
       </main>
     </div>
   </>
-);
+)
 
-export default Index;
+export default Index
 
 export const query = graphql`
   query {
@@ -64,4 +64,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

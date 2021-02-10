@@ -3,39 +3,39 @@ export const siteMetadata = {
   title: "Sam A. Horvath-Hunt's blog",
   description:
     "Sam A. Horvath-Hunt's personal blog. Mostly about code and tech.",
-};
+}
 
 type SerializeData = {
   query: {
     site: {
       siteMetadata: {
-        siteUrl: string;
-      };
-    };
+        siteUrl: string
+      }
+    }
     allMarkdownRemark: {
       edges: {
         node: {
-          excerpt: string;
-          html: string;
+          excerpt: string
+          html: string
           frontmatter: {
-            slug: string;
-            title: string;
-            date: string;
-          };
-        };
-      }[];
-    };
-  };
-};
+            slug: string
+            title: string
+            date: string
+          }
+        }
+      }[]
+    }
+  }
+}
 
 type FeedPostMeta = {
-  title: string;
-  description: string;
-  date: string;
-  url: string;
-  guid: string;
-  custom_elements: Record<string, unknown>[];
-};
+  title: string
+  description: string
+  date: string
+  url: string
+  guid: string
+  custom_elements: Record<string, unknown>[]
+}
 
 export const plugins = [
   "gatsby-plugin-sitemap",
@@ -134,4 +134,4 @@ export const plugins = [
     },
   },
   "gatsby-plugin-no-javascript",
-];
+]

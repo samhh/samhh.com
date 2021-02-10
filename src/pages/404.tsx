@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import Helmet from "react-helmet";
-import Nav from "~/components/Nav";
+import { ReactElement } from "react"
+import Helmet from "react-helmet"
+import Nav from "~/components/Nav"
 
 const FourZeroFour = (): ReactElement => (
   <>
@@ -20,6 +20,6 @@ const FourZeroFour = (): ReactElement => (
       </p>
     </div>
   </>
-);
+)
 
-export default FourZeroFour;
+export default FourZeroFour

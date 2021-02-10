@@ -1,5 +1,5 @@
-import { ReactElement, ReactNode } from "react";
-import s from "./Nav.module.css";
+import { ReactElement, ReactNode } from "react"
+import s from "./Nav.module.css"
 
 export enum NavPage {
   Blog,
@@ -7,18 +7,18 @@ export enum NavPage {
 }
 
 const MaybeLinked = (p: {
-  href: string;
-  children: ReactNode;
-  enabled: boolean;
+  href: string
+  children: ReactNode
+  enabled: boolean
 }): ReactElement => {
-  const inner = <>{p.children}</>;
+  const inner = <>{p.children}</>
 
-  return p.enabled ? <a href={p.href}>{inner}</a> : <strong>{inner}</strong>;
-};
+  return p.enabled ? <a href={p.href}>{inner}</a> : <strong>{inner}</strong>
+}
 
 type Props = {
-  activePage?: NavPage;
-};
+  activePage?: NavPage
+}
 
 const Nav = (p: Props): ReactElement => (
   <nav className={s.wrapper}>
@@ -63,6 +63,6 @@ const Nav = (p: Props): ReactElement => (
       </li>
     </ul>
   </nav>
-);
+)
 
-export default Nav;
+export default Nav

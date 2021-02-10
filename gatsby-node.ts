@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-conditional-statement, functional/no-expression-statement */
 
-import { GatsbyNode } from "gatsby";
-import { createFilePath } from "gatsby-source-filesystem";
+import { GatsbyNode } from "gatsby"
+import { createFilePath } from "gatsby-source-filesystem"
 
 // Until it's the default behaviour:
 // https://github.com/gatsbyjs/gatsby/issues/28657
@@ -13,29 +13,29 @@ export const onCreateBabelConfig: GatsbyNode["onCreateBabelConfig"] = ({
     options: {
       runtime: "automatic",
     },
-  });
+  })
 
 export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   node,
   getNode,
   actions: { createNodeField },
 }) => {
-  if (node.internal.type !== "MarkdownRemark") return;
+  if (node.internal.type !== "MarkdownRemark") return
 
-  const slug = createFilePath({ node, getNode, basePath: "pages" });
-  createNodeField({ node, name: "slug", value: slug });
-};
+  const slug = createFilePath({ node, getNode, basePath: "pages" })
+  createNodeField({ node, name: "slug", value: slug })
+}
 
 export const createPages: GatsbyNode["createPages"] = async ({
   actions: { createPage },
   graphql,
   reporter,
 }) => {
-  const template = require.resolve("./src/templates/blog-post.tsx");
+  const template = require.resolve("./src/templates/blog-post.tsx")
 
   type Res = {
-    allMarkdownRemark: { edges: { node: { frontmatter: { slug: string } } }[] };
-  };
+    allMarkdownRemark: { edges: { node: { frontmatter: { slug: string } } }[] }
+  }
   const res = await graphql<Res>(`
     {
       allMarkdownRemark {
@@ -48,11 +48,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
         }
       }
     }
-  `);
+  `)
 
   if (res.errors) {
-    reporter.panicOnBuild("Error while running GraphQL query.");
-    return;
+    reporter.panicOnBuild("Error while running GraphQL query.")
+    return
   }
 
   // eslint-disable-next-line functional/no-loop-statement
@@ -65,6 +65,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
       path: `/blog/${slug}/`,
       component: template,
       context: { slug },
-    });
+    })
   }
-};
+}

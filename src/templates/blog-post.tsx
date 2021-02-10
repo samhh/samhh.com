@@ -1,21 +1,21 @@
-import { ReactElement } from "react";
-import { graphql } from "gatsby";
-import s from "./blog-post.module.css";
-import Helmet from "react-helmet";
-import Nav from "~/components/Nav";
+import { ReactElement } from "react"
+import { graphql } from "gatsby"
+import s from "./blog-post.module.css"
+import Helmet from "react-helmet"
+import Nav from "~/components/Nav"
 
 type Props = {
   data: {
     markdownRemark: {
       frontmatter: {
-        title: string;
-        friendlyDate: string;
-        date: string;
-      };
-      html: string;
-    };
-  };
-};
+        title: string
+        friendlyDate: string
+        date: string
+      }
+      html: string
+    }
+  }
+}
 
 const BlogPost = ({
   data: {
@@ -38,9 +38,9 @@ const BlogPost = ({
       <main dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   </>
-);
+)
 
-export default BlogPost;
+export default BlogPost
 
 export const postQuery = graphql`
   query($slug: String!) {
@@ -53,4 +53,4 @@ export const postQuery = graphql`
       }
     }
   }
-`;
+`

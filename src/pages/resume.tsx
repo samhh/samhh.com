@@ -1,13 +1,13 @@
-import { ReactElement, ReactNode } from "react";
-import s from "./resume.module.css";
-import * as O from "fp-ts/Option";
-import Nav, { NavPage } from "~/components/Nav";
-import Experience from "~/components/Experience";
-import Footer from "~/components/Footer";
-import Helmet from "react-helmet";
-import Quote from "~/components/Quote";
-import Section from "~/components/Section";
-import { Contribution, Hobby, Project, Work } from "~/modules/resume";
+import { ReactElement, ReactNode } from "react"
+import s from "./resume.module.css"
+import * as O from "fp-ts/Option"
+import Nav, { NavPage } from "~/components/Nav"
+import Experience from "~/components/Experience"
+import Footer from "~/components/Footer"
+import Helmet from "react-helmet"
+import Quote from "~/components/Quote"
+import Section from "~/components/Section"
+import { Contribution, Hobby, Project, Work } from "~/modules/resume"
 
 const work: NonEmptyArray<Work> = [
   {
@@ -53,7 +53,7 @@ const work: NonEmptyArray<Work> = [
       "I designed and implemented the majority of Perspective's websites. Additionally I began the rewrite of the internal company CMS, converging dozens of legacy systems into a single unified experience. Prior to leaving I lobbied for a change from archaic FTP uploads to a version control system.",
     highlights: ["HTML", "CSS", "Sass", "PHP", "MySQL", "Git"],
   },
-];
+]
 
 const projects: NonEmptyArray<Project> = [
   {
@@ -110,7 +110,7 @@ const projects: NonEmptyArray<Project> = [
       "This is the site you're viewing right now! I've strived to make it maintainable above all else; it produces static files with Gatsby and can be easily deployed to countless service providers without any hassle.",
     highlights: ["TypeScript", "React", "Gatsby", "GraphQL"],
   },
-];
+]
 
 const contrib: NonEmptyArray<Contribution> = [
   {
@@ -139,7 +139,7 @@ const contrib: NonEmptyArray<Contribution> = [
     ],
     highlights: ["TypeScript"],
   },
-];
+]
 
 const hobbies: NonEmptyArray<Hobby> = [
   {
@@ -162,7 +162,7 @@ const hobbies: NonEmptyArray<Hobby> = [
     summary:
       "I'm an avid gamer, currently predominantly spending my time with Deep Rock Galactic and Half-Life: Alyx. I hit Grand Champion in Rocket League a while back and decided that was the right time to take it out of my regular rotation, but feel free to hit me up for a game!",
   },
-];
+]
 
 const Resume = (): ReactElement => (
   <>
@@ -188,7 +188,7 @@ const Resume = (): ReactElement => (
         <Section
           title="Jobs"
           body={(): ReactNode =>
-            work.map((j) => (
+            work.map(j => (
               <Experience
                 key={j.company}
                 title={(): ReactNode => (
@@ -211,7 +211,7 @@ const Resume = (): ReactElement => (
         <Section
           title="Open Source Projects"
           body={(): ReactNode =>
-            projects.map((p) => (
+            projects.map(p => (
               <Experience
                 key={p.name}
                 title={(): ReactNode => (
@@ -234,10 +234,10 @@ const Resume = (): ReactElement => (
         <Section
           title="Open Source Contributions"
           body={(): ReactNode =>
-            contrib.map((c) => (
+            contrib.map(c => (
               <Experience
                 key={c.name}
-                links={c.changesets.map((ch) => ({
+                links={c.changesets.map(ch => ({
                   title: ch.id,
                   url: ch.url,
                 }))}
@@ -260,7 +260,7 @@ const Resume = (): ReactElement => (
         <Section
           title="Hobbies"
           body={(): ReactNode =>
-            hobbies.map((h) => (
+            hobbies.map(h => (
               <Experience key={h.name} title={h.name} summary={h.summary} />
             ))
           }
@@ -270,6 +270,6 @@ const Resume = (): ReactElement => (
       <Footer title="References" description="Available upon request." />
     </div>
   </>
-);
+)
 
-export default Resume;
+export default Resume
