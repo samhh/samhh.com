@@ -1,3 +1,5 @@
+/* eslint-disable functional/no-conditional-statement, functional/no-expression-statement */
+
 import { GatsbyNode } from "gatsby";
 import { createFilePath } from "gatsby-source-filesystem";
 
@@ -53,6 +55,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return;
   }
 
+  // eslint-disable-next-line functional/no-loop-statement
   for (const {
     node: {
       frontmatter: { slug },
