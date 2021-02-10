@@ -1,17 +1,3 @@
-// eslint-disable-next-line
-const tsconfig: typeof import("./tsconfig.json") = require("./tsconfig.json");
-
-const tsconfigAliases = Object.entries(tsconfig.compilerOptions.paths).reduce<
-  Record<string, string>
->((acc, [k, [v]]) => {
-  const key = k.replace(/\/\*$/, "");
-  const value = v.replace(/^\./, "src").replace(/\/\*$/, "");
-
-  acc[key] = value;
-
-  return acc;
-}, {});
-
 export const siteMetadata = {
   siteUrl: "https://www.samhh.com",
   title: "Sam A. Horvath-Hunt's blog",
