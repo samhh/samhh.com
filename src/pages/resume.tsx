@@ -92,8 +92,8 @@ const Resume = (): ReactElement => (
         <p>
           I've been writing code professionally for{" "}
           {formatDistanceToNow(overallStart)} now. If you'd like to see what
-          open source software I work on in my free time, check out my GitHub
-          profile via the link at the top.
+          open source software I work on in my free time, check out my software
+          page via the link at the top.
         </p>
 
         <p>
