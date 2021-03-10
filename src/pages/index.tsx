@@ -1,6 +1,7 @@
 import { ReactElement } from "react"
 import { graphql } from "gatsby"
-import s from "./index.module.css"
+import * as s from "./index.module.css"
+import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
 import Footer from "~/components/Footer"
 import Helmet from "react-helmet"
@@ -25,7 +26,7 @@ const Index = ({
     allMarkdownRemark: { nodes },
   },
 }: Props): ReactElement => (
-  <>
+  <Page>
     <Helmet>
       <title>Sam A. Horvath-Hunt's blog</title>
     </Helmet>
@@ -53,7 +54,7 @@ const Index = ({
         </p>
       </Footer>
     </div>
-  </>
+  </Page>
 )
 
 export default Index

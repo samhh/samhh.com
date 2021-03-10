@@ -1,6 +1,7 @@
 import { ReactElement, ReactNode } from "react"
-import s from "./resume.module.css"
+import * as s from "./resume.module.css"
 import * as O from "fp-ts/Option"
+import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
 import Experience from "~/components/Experience"
 import Helmet from "react-helmet"
@@ -69,7 +70,7 @@ const work: NonEmptyArray<Work> = [
 ]
 
 const Resume = (): ReactElement => (
-  <>
+  <Page>
     <Helmet>
       <title>Sam A. Horvath-Hunt's résumé — Software Engineer</title>
     </Helmet>
@@ -223,7 +224,7 @@ const Resume = (): ReactElement => (
         />
       </main>
     </div>
-  </>
+  </Page>
 )
 
 export default Resume

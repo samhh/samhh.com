@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from "react"
-import s from "./Footer.module.css"
+import * as s from "./Footer.module.css"
 
 type Props = {
   children: ReactNode

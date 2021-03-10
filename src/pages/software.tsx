@@ -1,7 +1,8 @@
 import { ReactElement } from "react"
+import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
 import Helmet from "react-helmet"
-import s from "./software.module.css"
+import * as s from "./software.module.css"
 
 type Software = {
   name: string
@@ -54,7 +55,7 @@ const Item = (p: Software): ReactElement => (
 )
 
 const Software = (): ReactElement => (
-  <>
+  <Page>
     <Helmet>
       <title>Sam A. Horvath-Hunt's software</title>
     </Helmet>
@@ -82,7 +83,7 @@ const Software = (): ReactElement => (
         </ul>
       </main>
     </div>
-  </>
+  </Page>
 )
 
 export default Software

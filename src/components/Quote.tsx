@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react"
-import s from "./Quote.module.css"
+import * as s from "./Quote.module.css"
 
 type Props = {
   quote: string

@@ -1,9 +1,10 @@
 import { ReactElement } from "react"
 import Helmet from "react-helmet"
+import Page from "~/components/Page"
 import Nav from "~/components/Nav"
 
 const FourZeroFour = (): ReactElement => (
-  <>
+  <Page>
     <Helmet>
       <title>Sam A. Horvath-Hunt's website — are you lost?</title>
     </Helmet>
@@ -19,7 +20,7 @@ const FourZeroFour = (): ReactElement => (
         I've misconfigured something.
       </p>
     </div>
-  </>
+  </Page>
 )
 
 export default FourZeroFour

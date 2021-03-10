@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from "react"
-import s from "./Nav.module.css"
+import * as s from "./Nav.module.css"
 
 export enum NavPage {
   Blog,

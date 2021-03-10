@@ -2,7 +2,7 @@ import { FunctionComponent, ReactNode } from "react"
 import * as O from "fp-ts/Option"
 import { constant } from "fp-ts/function"
 import formatDate from "date-fns/fp/format"
-import s from "./Experience.module.css"
+import * as s from "./Experience.module.css"
 
 const fmt = formatDate("MMMM yyyy")
 const fmtCurr = O.fold(constant("Present"), fmt)

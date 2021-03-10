@@ -1,6 +1,7 @@
 import { ReactElement } from "react"
 import { graphql } from "gatsby"
-import s from "./blog-post.module.css"
+import * as s from "./blog-post.module.css"
+import Page from "~/components/Page"
 import Helmet from "react-helmet"
 import Nav from "~/components/Nav"
 
@@ -22,7 +23,7 @@ const BlogPost = ({
     markdownRemark: { frontmatter: meta, html },
   },
 }: Props): ReactElement => (
-  <>
+  <Page>
     <Helmet>
       <title>{meta.title}</title>
     </Helmet>
@@ -37,7 +38,7 @@ const BlogPost = ({
 
       <main dangerouslySetInnerHTML={{ __html: html }} />
     </div>
-  </>
+  </Page>
 )
 
 export default BlogPost

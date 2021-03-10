@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from "react"
 import Heading from "~/components/Heading"
-import s from "./Section.module.css"
+import * as s from "./Section.module.css"
 
 type Props = {
   title: string

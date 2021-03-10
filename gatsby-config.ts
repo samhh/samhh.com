@@ -44,17 +44,17 @@ export const plugins = [
     resolve: "gatsby-plugin-feed",
     options: {
       query: `
-				{
-					site {
-						siteMetadata {
-							title
-							description
-							siteUrl
-							site_url: siteUrl
-						}
-					}
-				}
-			`,
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
       feeds: [
         {
           serialize: ({
@@ -76,24 +76,24 @@ export const plugins = [
               custom_elements: [{ "content:encoded": node.html }],
             })),
           query: `
-					{
-						allMarkdownRemark(
-							sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] },
-						) {
-							edges {
-								node {
-									excerpt
-									html
-									frontmatter {
-										slug
-										title
-										date
-									}
-								}
-							}
-						}
-					}
-				`,
+          {
+            allMarkdownRemark(
+              sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] },
+            ) {
+              edges {
+                node {
+                  excerpt
+                  html
+                  frontmatter {
+                    slug
+                    title
+                    date
+                  }
+                }
+              }
+            }
+          }
+        `,
           output: "/rss.xml",
           title: "Sam A. Horvath-Hunt's blog",
         },
@@ -101,12 +101,6 @@ export const plugins = [
     },
   },
   "gatsby-plugin-react-helmet",
-  {
-    resolve: "gatsby-plugin-favicon",
-    options: {
-      logo: "./static/favicon.png",
-    },
-  },
   "gatsby-plugin-typescript",
   {
     resolve: "gatsby-plugin-alias-imports",
