@@ -52,6 +52,12 @@ const Index = ({
             RSS feed
           </a>
         </p>
+
+        <p>
+          <a href="https://github.com/samhh/dotfiles/blob/desktop-linux/home/.config/newsboat/urls" target="_blank" rel="noopener noreferrer">
+            Blogs I'm subscribed to
+          </a>
+        </p>
       </Footer>
     </div>
   </Page>
