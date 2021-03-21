@@ -4,7 +4,6 @@ import * as s from "./index.module.css"
 import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
 import Footer from "~/components/Footer"
-import Helmet from "react-helmet"
 
 type Props = {
   data: {
@@ -26,11 +25,7 @@ const Index = ({
     allMarkdownRemark: { nodes },
   },
 }: Props): ReactElement => (
-  <Page>
-    <Helmet>
-      <title>Sam A. Horvath-Hunt's blog</title>
-    </Helmet>
-
+  <Page title="Blog" desc="A chronological list of all my blog posts.">
     <div className="u-page">
       <Nav activePage={NavPage.Blog} />
 
@@ -54,7 +49,11 @@ const Index = ({
         </p>
 
         <p>
-          <a href="https://github.com/samhh/dotfiles/blob/desktop-linux/home/.config/newsboat/urls" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/samhh/dotfiles/blob/desktop-linux/home/.config/newsboat/urls"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Blogs I'm subscribed to
           </a>
         </p>

@@ -4,7 +4,6 @@ import * as O from "fp-ts/Option"
 import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
 import Experience from "~/components/Experience"
-import Helmet from "react-helmet"
 import Quote from "~/components/Quote"
 import Section from "~/components/Section"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
@@ -70,11 +69,10 @@ const work: NonEmptyArray<Work> = [
 ]
 
 const Resume = (): ReactElement => (
-  <Page>
-    <Helmet>
-      <title>Sam A. Horvath-Hunt's résumé — Software Engineer</title>
-    </Helmet>
-
+  <Page
+    title="Résumé, Software Engineer"
+    desc="This is the résumé of a software engineer."
+  >
     <div className="u-page">
       <Nav activePage={NavPage.Resume} />
 

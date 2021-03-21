@@ -2,7 +2,6 @@ import { ReactElement } from "react"
 import { graphql } from "gatsby"
 import * as s from "./blog-post.module.css"
 import Page from "~/components/Page"
-import Helmet from "react-helmet"
 import Nav from "~/components/Nav"
 
 type Props = {
@@ -14,20 +13,17 @@ type Props = {
         date: string
       }
       html: string
+      excerpt: string
     }
   }
 }
 
 const BlogPost = ({
   data: {
-    markdownRemark: { frontmatter: meta, html },
+    markdownRemark: { frontmatter: meta, html, excerpt },
   },
 }: Props): ReactElement => (
-  <Page>
-    <Helmet>
-      <title>{meta.title}</title>
-    </Helmet>
-
+  <Page title={meta.title} desc={excerpt}>
     <div className="u-page">
       <Nav />
 
@@ -47,6 +43,7 @@ export const postQuery = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         title
         friendlyDate: date(formatString: "MMMM DD, YYYY")

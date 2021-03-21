@@ -1,7 +1,6 @@
 import { ReactElement } from "react"
 import Page from "~/components/Page"
 import Nav, { NavPage } from "~/components/Nav"
-import Helmet from "react-helmet"
 import * as s from "./software.module.css"
 
 type Software = {
@@ -55,11 +54,7 @@ const Item = (p: Software): ReactElement => (
 )
 
 const Software = (): ReactElement => (
-  <Page>
-    <Helmet>
-      <title>Sam A. Horvath-Hunt's software</title>
-    </Helmet>
-
+  <Page title="Software" desc="A curated list of software I maintain.">
     <div className="u-page">
       <Nav activePage={NavPage.Software} />
 
