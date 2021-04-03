@@ -67,11 +67,7 @@ export const plugins = [
               title: node.frontmatter.title,
               description: node.excerpt,
               date: node.frontmatter.date,
-              url:
-                site.siteMetadata.siteUrl +
-                "/blog/" +
-                node.frontmatter.slug +
-                "/",
+              url: site.siteMetadata.siteUrl + "/blog/" + node.frontmatter.slug,
               guid: node.frontmatter.slug,
               custom_elements: [{ "content:encoded": node.html }],
             })),

@@ -35,7 +35,7 @@ const Index = ({
             <li key={meta.slug}>
               <time dateTime={meta.date}>{meta.friendlyDate}</time>
               <br />
-              <a href={`/blog/${meta.slug}/`}>{meta.title}</a>
+              <a href={`/blog/${meta.slug}`}>{meta.title}</a>
             </li>
           ))}
         </ol>

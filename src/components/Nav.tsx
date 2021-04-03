@@ -45,14 +45,14 @@ const Nav = (p: Props): ReactElement => (
       </li>
       <li>
         <MaybeLinked
-          href="/software/"
+          href="/software"
           enabled={p.activePage !== NavPage.Software}
         >
           Software
         </MaybeLinked>
       </li>
       <li>
-        <MaybeLinked href="/resume/" enabled={p.activePage !== NavPage.Resume}>
+        <MaybeLinked href="/resume" enabled={p.activePage !== NavPage.Resume}>
           Résumé
         </MaybeLinked>
       </li>
