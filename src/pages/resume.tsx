@@ -146,9 +146,9 @@ const Resume = (): ReactElement => (
           body={(): ReactNode => (
             <p>
               I am ideologically tied to and have great faith in the open source
-              community. To this end I contribute patches and maintain a modest
-              collection of my own software. This is an area I intend to further
-              grow into.
+              community. To this end I contribute patches where I can, maintain
+              a modest collection of my own software, and maintain some AUR
+              packages. This is an area I intend to further grow into.
             </p>
           )}
         />
