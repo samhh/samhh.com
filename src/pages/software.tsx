@@ -38,7 +38,7 @@ const allSoftware: NonEmptyArray<Software> = [
     name: "bangin",
     summary:
       "bangin is a deliberately small, thoughtfully-designed POSIX-compliant shell script which replicates the behaviour of DuckDuckGo's bangs on the command-line.",
-    href: "https://github.com/samhh/bangin",
+    href: "https://git.sr.ht/~samhh/bangin",
   },
 ]
 
