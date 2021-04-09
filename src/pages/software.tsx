@@ -61,11 +61,7 @@ const Software = (): ReactElement => (
       <main>
         <p>
           All of my open source software is currently hosted on&nbsp;
-          <a
-            href="https://github.com/samhh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/samhh" rel="noopener noreferrer">
             GitHub
           </a>
           .

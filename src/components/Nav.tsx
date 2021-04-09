@@ -34,9 +34,7 @@ const Nav = (p: Props): ReactElement => (
         <a href="mailto:hello@samhh.com">Email</a>
       </li>
       <li>
-        <a href="/publickey.txt" target="_blank">
-          PGP
-        </a>
+        <a href="/publickey.txt">PGP</a>
       </li>
       <li>
         <MaybeLinked href="/" enabled={p.activePage !== NavPage.Blog}>

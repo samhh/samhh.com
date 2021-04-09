@@ -43,15 +43,12 @@ const Index = ({
 
       <Footer>
         <p>
-          <a href="/rss.xml" target="_blank">
-            RSS feed
-          </a>
+          <a href="/rss.xml">RSS feed</a>
         </p>
 
         <p>
           <a
             href="https://github.com/samhh/dotfiles/blob/desktop-linux/home/.config/newsboat/urls"
-            target="_blank"
             rel="noopener noreferrer"
           >
             Blogs I'm subscribed to

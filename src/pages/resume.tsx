@@ -216,11 +216,7 @@ const Resume = (): ReactElement => (
                 <Experience
                   key={j.company}
                   title={(): ReactNode => (
-                    <a
-                      href={j.website.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={j.website.href} rel="noopener noreferrer">
                       {j.company}
                     </a>
                   )}
