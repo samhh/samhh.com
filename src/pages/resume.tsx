@@ -142,6 +142,18 @@ const Resume = (): ReactElement => (
         />
 
         <Section
+          title="Open Source"
+          body={(): ReactNode => (
+            <p>
+              I am ideologically tied to and have great faith in the open source
+              community. To this end I contribute patches and maintain a modest
+              collection of my own software. This is an area I intend to further
+              grow into.
+            </p>
+          )}
+        />
+
+        <Section
           title="Learning & Teaching"
           body={(): ReactNode => (
             <p>
