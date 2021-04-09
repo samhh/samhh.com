@@ -60,7 +60,11 @@ const Software = (): ReactElement => (
 
       <main>
         <p>
-          All of my open source software is currently hosted on&nbsp;
+          All of my open source software is currently hosted either on&nbsp;
+          <a href="https://git.sr.ht/~samhh/" rel="noopener noreferrer">
+            sourcehut
+          </a>
+          &nbsp;or&nbsp;
           <a href="https://github.com/samhh" rel="noopener noreferrer">
             GitHub
           </a>
