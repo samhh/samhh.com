@@ -38,7 +38,7 @@ const allSoftware: NonEmptyArray<Software> = [
     name: "bangin",
     summary:
       "bangin is a deliberately small, thoughtfully-designed POSIX-compliant shell script which replicates the behaviour of DuckDuckGo's bangs on the command-line.",
-    href: "https://git.sr.ht/~samhh/bangin",
+    href: "https://sr.ht/~samhh/bangin/",
   },
 ]
 
@@ -61,7 +61,7 @@ const Software = (): ReactElement => (
       <main>
         <p>
           All of my open source software is currently hosted either on&nbsp;
-          <a href="https://git.sr.ht/~samhh/" rel="noopener noreferrer">
+          <a href="https://sr.ht/~samhh/" rel="noopener noreferrer">
             sourcehut
           </a>
           &nbsp;or&nbsp;
