@@ -9,6 +9,7 @@ const fmtCurr = O.fold(constant("Present"), fmt)
 
 type Props = {
   title: string | (() => ReactNode)
+  desc: string;
   dates: [Date, Option<Date>]
 }
 
@@ -21,6 +22,8 @@ const Experience: FunctionComponent<Props> = props => (
         {fmt(props.dates[0])} - {fmtCurr(props.dates[1])}
       </span>
     </h2>
+
+    <p>{props.desc}</p>
   </div>
 )
 

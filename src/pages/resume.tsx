@@ -10,6 +10,7 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
 type Work = {
   company: string
+  desc: string
   website: URL
   startDate: Date
   endDate: Option<Date>
@@ -44,24 +45,53 @@ const keywords = [
 const work: NonEmptyArray<Work> = [
   {
     company: "Adaptavist",
+    desc: `
+      In my current position at Adaptavist I work on our product's React
+      frontend and its associated Node.js serverless functions, making heavy
+      use of fp-ts, io-ts, newtype-ts, et al. I lead the team towards best
+      practices, including refactoring everything into strict TypeScript,
+      incorporating property-based testing and page-level integration testing,
+      and generally emphasing long-term maintainability for developers and
+      perennial reliability for end users.
+    `,
     website: new URL("https://www.adaptavist.com"),
     startDate: new Date("2018-12-11"),
     endDate: O.none,
   },
   {
     company: "Oddschecker",
+    desc: `
+      At Oddschecker I spearheaded a greenfield B2B project utilising React and
+      D3 on the frontend and Node.js on the backend, all written in TypeScript.
+      I liaised with product and QA to ensure it satisfied requirements and did
+      so in good condition.
+    `,
     website: new URL("https://www.oddschecker.com"),
     startDate: new Date("2017-02-28"),
     endDate: O.some(new Date("2018-12-10")),
   },
   {
     company: "Impero",
+    desc: `
+      My work at Impero was predominantly building new websites from scratch
+      for clients following a design. These would typically be very complex in
+      terms of the requisite CSS. Between projects I worked with just about
+      every permutation of CSS pre- or post-processor. I also occasionally
+      worked with reactive libraries like React and Vue.
+    `,
     website: new URL("https://weareimpero.com"),
     startDate: new Date("2015-12-07"),
     endDate: O.some(new Date("2017-02-25")),
   },
   {
     company: "Perspective Publishing",
+    desc: `
+      I designed and implemented the frontend of the majority of Perspective's
+      websites, and rewrote the backend of the internal company CMS in PHP
+      leveraging MySQL, converging dozens of legacy systems into a single
+      unified experience. Prior to leaving I lobbied for a change from archaic
+      FTP uploads to a modern version control system.
+    `,
     website: new URL("https://www.perspectivepublishing.com"),
     startDate: new Date("2014-03-03"),
     endDate: O.some(new Date("2015-12-04")),
@@ -93,17 +123,6 @@ const Resume = (): ReactElement => (
           {formatDistanceToNow(overallStart)} now. If you'd like to see what
           open source software I work on in my free time, check out my software
           page via the link at the top.
-        </p>
-
-        <p>
-          In my current position at Adaptavist, in the ScriptRunner Cloud team,
-          I've been pioneering a number of frontend and serverless initiatives.
-          These range from refactoring everything into strict, functional
-          TypeScript, to encouraging us towards better testing practices,
-          introducing property-based testing and page-level integration testing.
-          A major redesign of a parser core to our business is currently
-          planned, to which end I've written a greenlit prototype in Haskell in
-          the style of a recursive descent parser.
         </p>
 
         <Section
@@ -220,6 +239,7 @@ const Resume = (): ReactElement => (
                       {j.company}
                     </a>
                   )}
+                  desc={j.desc}
                   dates={[j.startDate, j.endDate]}
                 />
               ))}
