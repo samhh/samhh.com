@@ -225,6 +225,9 @@ const Resume = (): ReactElement => (
               ))}
 
               <p>References available upon request.</p>
+
+              { // eslint-disable-next-line functional/no-expression-statement
+              } <p><a href="#" onClick={(evt) => { window.print(); evt.preventDefault() }}>Download this résumé</a> (save as PDF).</p>
             </>
           )}
         />
