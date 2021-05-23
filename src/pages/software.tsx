@@ -23,6 +23,11 @@ const allSoftware: NonEmptyArray<Software> = [
     href: "https://github.com/samhh/fp-ts-std",
   },
   {
+    name: "unerf",
+    summary: "Unearth build scripts in unfamiliar projects.",
+    href: "https://sr.ht/~samhh/unerf/",
+  },
+  {
     name: "terpod",
     summary:
       "terpod is a terminal podcast manager written in Haskell. It allows the user to sync feeds, list feed episodes, and download episodes on demand.",
