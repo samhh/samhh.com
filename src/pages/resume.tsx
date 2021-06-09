@@ -44,9 +44,17 @@ const keywords = [
 
 const work: NonEmptyArray<Work> = [
   {
+    company: "Standard Chartered",
+    desc:
+      "I'm excited to be working with Haskell (Mu) full-time at Standard Chartered.",
+    website: new URL("https:///www.sc.com"),
+    startDate: new Date("2021-06-21"),
+    endDate: O.none,
+  },
+  {
     company: "Adaptavist",
     desc: `
-      In my current position at Adaptavist I work on our product's React
+      At Adaptavist I worked on our product's React
       frontend and its associated Node.js serverless functions, making heavy
       use of fp-ts, io-ts, newtype-ts, et al. I lead the team towards best
       practices, including refactoring everything into strict TypeScript,
@@ -56,7 +64,7 @@ const work: NonEmptyArray<Work> = [
     `,
     website: new URL("https://www.adaptavist.com"),
     startDate: new Date("2018-12-11"),
-    endDate: O.none,
+    endDate: O.some(new Date("2021-06-09")),
   },
   {
     company: "Oddschecker",
