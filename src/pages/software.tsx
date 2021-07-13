@@ -85,7 +85,7 @@ const Software = (): ReactElement => (
         <p>
           I also maintain some&nbsp;
           <a
-            href="https://aur.archlinux.org/packages/?O=0&SeB=m&K=samhh&outdated=&SB=n&SO=a&PP=50&do_Search=Go"
+            href="https://aur.archlinux.org/packages/?O=0&SeB=M&K=samhh&outdated=&SB=n&SO=a&PP=50&do_Search=Go"
             rel="noopener referrer"
           >
             AUR packages
