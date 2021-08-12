@@ -9,7 +9,7 @@ const fmtCurr = O.fold(constant("Present"), fmt)
 
 type Props = {
   title: string | (() => ReactNode)
-  desc: string;
+  desc: string
   dates: [Date, Option<Date>]
 }
 

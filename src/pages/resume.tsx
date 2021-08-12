@@ -44,12 +44,25 @@ const keywords = [
 
 const work: NonEmptyArray<Work> = [
   {
+    company: "Unsplash",
+    desc: `
+      I'm excited to be working on Unsplash's frontend, leveraging functional
+      programming and the fp-ts ecosystem.
+    `,
+    website: new URL("https://unsplash.com"),
+    startDate: new Date("2021-08-17"),
+    endDate: O.none,
+  },
+  {
     company: "Standard Chartered",
-    desc:
-      "I'm excited to be working with Haskell (Mu) full-time at Standard Chartered.",
+    desc: `
+      I briefly worked at Standard Chartered with Haskell (Mu), however it
+      wasn't a good fit and I handed in my resignation. I'll elaborate upon
+      this a little in a blog post at some point.
+    `,
     website: new URL("https:///www.sc.com"),
     startDate: new Date("2021-06-21"),
-    endDate: O.none,
+    endDate: O.some(new Date("2021-08-14")),
   },
   {
     company: "Adaptavist",
